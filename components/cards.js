@@ -1,4 +1,4 @@
-class cardscomponent extends HTMLElement {
+class mixcardscomponent extends HTMLElement {
     connectedCallback() {
 
         this.innerHTML = `
@@ -69,7 +69,7 @@ class cardscomponent extends HTMLElement {
     </div>
   </div>
 
-  <div class="news-card">
+<!--  <div class="news-card">
     <a href="#" class="news-card__card-link"></a>
     <img src="https://images.pexels.com/photos/210243/pexels-photo-210243.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="" class="news-card__image">
     <div class="news-card__text-wrapper">
@@ -80,11 +80,11 @@ class cardscomponent extends HTMLElement {
         <a href="#" class="news-card__read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
       </div>
     </div>
-  </div>
+  </div> -->
 
 </div>
         `;
     }
 }
 
-window.customElements.define('card-component', cardscomponent);
+window.customElements.define('mix-card-component', mixcardscomponent);
