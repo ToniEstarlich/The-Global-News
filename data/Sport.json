@@ -1,0 +1,52 @@
+{
+  "sportsNews": [
+    {
+      "epigraph": "Breaking boundaries in tennis",
+      "headline": "Historic Victory at Wimbledon 2024",
+      "subtitle": "A newcomer shocks the world with her stunning performance",
+      "lead": "In a surprising turn of events, a young athlete claims her first Grand Slam title at Wimbledon, defying all odds.",
+      "body": "The 2024 Wimbledon finals will go down in history as one of the most exciting tournaments ever. The 19-year-old tennis sensation, Emma Johnson, rose from being an underdog to defeating the top-seeded champion in straight sets. With a dazzling display of skill, speed, and mental resilience, Johnson secured her place in the annals of tennis history. The final match was a thriller, with the crowd on the edge of their seats throughout. 'I’ve dreamed of this moment my whole life,' said Johnson, tears of joy streaming down her face after her victory. Her journey to the top was anything but easy, facing numerous injuries and setbacks along the way. Despite being ranked 50th at the beginning of the year, she showed determination, knocking out several high-profile players. Her opponent, world No. 1 Sophia Williams, was gracious in defeat, praising Johnson for her exceptional performance. This victory marks a new chapter in the sport, as young talent continues to challenge the established order. With this win, Johnson is set to become a global sports icon, inspiring millions of young athletes worldwide.",
+      "writer": "John Maxwell",
+      "aboutWriter": "John Maxwell is an international sports journalist with over 15 years of experience covering major tennis tournaments. He has written for several top publications and is known for his in-depth analysis and passionate coverage of the sport.",
+      "picture": "images/sport1.jpg"
+    },
+    {
+      "epigraph": "The rise of American football stars",
+      "headline": "Unstoppable Force: The Rise of Quarterback David Stone",
+      "subtitle": "David Stone is redefining the game with his incredible skills",
+      "lead": "David Stone continues to dominate the field as one of the NFL’s most promising quarterbacks, leading his team to a record-breaking season.",
+      "body": "David Stone's meteoric rise in the NFL has taken the football world by storm. Known for his precise throws and ability to read defenses like no other, Stone has already led his team, the New York Falcons, to an 8-0 winning streak this season. Analysts are comparing him to the all-time greats, despite this being only his second year in the league. His performance in last night’s game against the Chicago Lions was nothing short of spectacular, as he threw four touchdown passes and orchestrated a 21-point comeback in the fourth quarter. Fans and critics alike are hailing him as the future of American football. Stone's journey to the NFL was far from ordinary. Coming from a small town in Texas, he worked tirelessly to earn a scholarship to a top college football program. Now, he's considered one of the league's top players, with many predicting a Hall of Fame career. 'It's not just about winning games; it's about making history,' Stone said in a post-game interview. With his unmatched talent and work ethic, David Stone is poised to become a legend in the sport.",
+      "writer": "Sarah Thompson",
+      "aboutWriter": "Sarah Thompson is a seasoned sports writer specializing in American football. She has covered the NFL for over a decade and is known for her insightful player profiles and game analyses.",
+      "picture": "images/sport2.jpg"
+    },
+    {
+      "epigraph": "A new dawn for cycling",
+      "headline": "Tour de France 2024: The Underdog Triumphs",
+      "subtitle": "An unexpected victory shakes the cycling world",
+      "lead": "Cycling fans witnessed a monumental moment as an underdog rider claimed the Tour de France title in a stunning performance.",
+      "body": "The 2024 Tour de France will be remembered as one of the most unpredictable and exciting in recent memory. 26-year-old cyclist, Liam O'Connor, defied expectations by securing the coveted yellow jersey in the final stage of the race. O'Connor, who had been overshadowed by more prominent names in the sport, demonstrated incredible endurance, strategic acumen, and determination. His victory in the grueling mountain stages set him apart from his competitors. 'I’ve been dreaming of this since I was a child, watching the Tour on TV,' O'Connor said after crossing the finish line. This victory came after a difficult year for O'Connor, who suffered a serious injury during training. His perseverance and hard work have paid off, making this win all the more meaningful. The cycling community is hailing him as the next big name in the sport, and his journey is sure to inspire a new generation of cyclists. With a humble background and a tireless work ethic, O'Connor is now set to enjoy the global spotlight.",
+      "writer": "David Roberts",
+      "aboutWriter": "David Roberts is an award-winning journalist who has been covering international cycling events for over 12 years. He has a deep passion for the sport and brings his audience compelling stories from the world of competitive cycling.",
+      "picture": "images/sport3.jpg"
+    }
+  ],
+  
+  "sportsNews-cards": [
+    {
+      "epigraph": "Breaking boundaries in tennis",
+      "headline": "Historic Victory at Wimbledon 2024",
+      "picture": "images/sport1.jpg"
+    },
+    {
+      "epigraph": "The rise of American football stars",
+      "headline": "Unstoppable Force: The Rise of Quarterback David Stone",
+      "picture": "images/sport2.jpg"
+    },
+    {
+      "epigraph": "A new dawn for cycling",
+      "headline": "Tour de France 2024: The Underdog Triumphs",
+      "picture": "images/sport3.jpg"
+    }
+  ]
+}
