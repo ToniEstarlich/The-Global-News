@@ -1,0 +1,112 @@
+.breaking-news {
+    font-family: Arial, sans-serif;
+    width: 80%;
+    position: fixed; /* Fixed position at the bottom */
+    left: 0;
+    bottom: -1;
+    z-index: 1000; /* Ensure it is above other content */
+    font-size: 27%;
+    margin-left: 10%;
+}
+
+.breaking-news-yellow {
+    color: rgb(0, 0, 0);
+    padding: 0;
+    text-align: left; /* Align text to the left */
+    font-weight: bold;
+    font-size: 20px;
+    display: flex; /* Use flexbox for better alignment */
+    align-items: center; /* Center vertically */
+    padding-left: 0px; /* Padding to the left */
+}
+
+.breaking-news-title {
+    background-color: #ffcc00;
+    color: rgb(0, 0, 0);
+    letter-spacing: 1px;
+}
+
+.breaking-news-black {
+    background: rgba(0,0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    text-align: center; /* Align text to the left */
+    font-weight: bold;
+    display: flex; /* Use flexbox for better alignment */
+    justify-content: space-between; /* Space between title and clock */
+    align-items: center; /* Center vertically */
+    font-size: large;
+}
+
+.breaking-news-main-title {
+    color: white;
+    font-size: 20px;
+    margin-left: 0%;
+}
+
+.clock {
+    margin-right: 60px;
+    font-size: 20%;
+}
+
+.breaking-news-red {
+    background-color: #cc0000;
+    color: white;
+}
+
+.animated-img {
+    font-size: 2px;
+}
+
+.breaking-news-marquee {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#breaking-news-list {
+    display: flex;
+    animation: marquee 20s linear infinite;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#breaking-news-list li {
+    padding: 0 50px;
+    font-size: 26px;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.clock {
+    font-size: 16px;
+    margin-top: 5px;
+    text-align: right; /* Align clock to the right */
+}
+
+@media (max-width: 600px) {
+    .breaking-news {
+        font-size: 16px; /* Reduce font size on small screens */
+    }
+    
+    .breaking-news-yellow, .breaking-news-black {
+        height: 40px; /* Reduced size */
+    }
+
+    #breaking-news-list li {
+        font-size: 20px; /* Smaller font size for list items */
+    }
+
+    .clock {
+        font-size: 12px; /* Smaller clock font size */
+    }
+}

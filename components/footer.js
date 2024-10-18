@@ -2,7 +2,7 @@ class FooterComponent extends HTMLElement {
     connectedCallback() {
 
         this.innerHTML = `
-    <div class="footer">
+                <div class="footer">
         <div class="box">
             <div class="left">
                 <div class="categories">
