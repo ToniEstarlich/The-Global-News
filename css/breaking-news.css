@@ -3,7 +3,7 @@
     width: 80%;
     position: fixed; /* Fixed position at the bottom */
     left: 0;
-    bottom: -1;
+    bottom: 9;
     z-index: 1000; /* Ensure it is above other content */
     font-size: 27%;
     margin-left: 10%;
@@ -24,10 +24,51 @@
     background-color: #ffcc00;
     color: rgb(0, 0, 0);
     letter-spacing: 1px;
+    padding: 10px 20px; /* Extra padding to emphasize the text */
+    position: relative; /* Required for the pseudo-element */
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase; /* Make the text more striking */
+    transform: skewX(-10deg); /* Creates a cut to the right */
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3); /* Adds depth with a shadow */
+    overflow: hidden; /* Ensures smooth edge on the skew effect */
+    transition: transform 0.5s ease-in-out, background-color 1s ease-in-out; /* Smooth transitions */
+    animation: exotic-glow 3s infinite alternate; /* Constant animation */
+}
+
+/* Pseudo-element to create an exotic cut on the right */
+.breaking-news-title::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -20px;
+    bottom: 0;
+    width: 50px;
+    background: linear-gradient(135deg, transparent 0%, #ffcc00 100%);
+    transform: skewX(45deg); /* Creates the cut */
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for the exotic effect */
+}
+
+/* Animation for a pulsating glow effect */
+@keyframes exotic-glow {
+    0% {
+        background-color: #ffcc00;
+        color: rgb(0, 0, 0);
+        transform: skewX(-10deg) scale(1);
+    }
+    50% {
+        background-color: #ffd633; /* Slight color change during animation */
+        transform: skewX(-10deg) scale(1.05); /* Slight scale to create movement */
+    }
+    100% {
+        background-color: #ffcc00;
+        color: rgb(0, 0, 0);
+        transform: skewX(-10deg) scale(1);
+    }
 }
 
 .breaking-news-black {
-    background: rgba(0,0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
     color: white;
     padding: 10px;
     text-align: center; /* Align text to the left */
@@ -44,18 +85,9 @@
     margin-left: 0%;
 }
 
-.clock {
-    margin-right: 60px;
-    font-size: 20%;
-}
-
 .breaking-news-red {
     background-color: #cc0000;
     color: white;
-}
-
-.animated-img {
-    font-size: 2px;
 }
 
 .breaking-news-marquee {
@@ -67,7 +99,8 @@
 
 #breaking-news-list {
     display: flex;
-    animation: marquee 20s linear infinite;
+    animation: marquee 200s linear infinite; /* Duration remains unchanged */
+    animation-delay: 0s; /* Start immediately */
     list-style: none;
     padding: 0;
     margin: 0;
@@ -75,22 +108,22 @@
 
 #breaking-news-list li {
     padding: 0 50px;
-    font-size: 26px;
+    font-size: 20px;
 }
 
+/* Animation for smooth scrolling */
 @keyframes marquee {
     0% {
-        transform: translateX(100%);
+        transform: translateX(100%); /* Start outside right */
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-100%); /* End outside left */
     }
 }
 
 .clock {
-    font-size: 16px;
-    margin-top: 5px;
-    text-align: right; /* Align clock to the right */
+    margin-right: 60px;
+    font-size: 100%;
 }
 
 @media (max-width: 600px) {

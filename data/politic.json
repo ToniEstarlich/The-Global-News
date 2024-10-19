@@ -1,0 +1,55 @@
+{
+    "politicsNews": [
+      {
+        "epigraph": "A critical moment for the EU",
+        "headline": "European Union Considers Major Expansion Amid Global Challenges",
+        "subtitle": "Expansion debates fuel concerns about governance and unity within the EU",
+        "lead": "As several countries seek membership, the European Union faces tough decisions about its future and the balance of political and economic interests.",
+        "body": "The European Union is at a pivotal point in its history as expansion talks dominate political discourse. Countries such as Ukraine, Albania, and Serbia are pushing for membership, with the EU weighing the pros and cons of further enlargement. Advocates argue that incorporating these nations would strengthen the EU’s economic base, provide geopolitical stability, and counter external threats like Russian influence. However, the challenges of governance and integration, particularly in aligning legal systems, economic policies, and democratic standards, are significant hurdles. Leaders across Europe are divided, with some favoring swift inclusion while others caution against diluting the union's core principles...<br>... (continúa con 3500 palabras)",
+        "writer": "Laura Martinez",
+        "aboutWriter": "Laura Martinez is a seasoned European affairs correspondent, covering the EU and its policies for over a decade.",
+        "picture": "images/politics1.jpg"
+      },
+      {
+        "epigraph": "A nation at a crossroads",
+        "headline": "UK Faces Economic and Political Uncertainty as Leadership Changes",
+        "subtitle": "The British government is in turmoil amid economic challenges and growing political divisions",
+        "lead": "With the economy struggling and political infighting in Westminster, the UK is facing one of its most difficult periods since Brexit.",
+        "body": "The United Kingdom is once again in the throes of political instability as economic woes continue to plague the nation. Inflation is rising, unemployment is creeping up, and public services are under immense pressure. Meanwhile, the British government is grappling with internal divisions, particularly within the ruling party. Prime Minister James Baker recently faced a leadership challenge, narrowly surviving a vote of no confidence. As Westminster struggles to unite around a coherent strategy for economic recovery, opposition parties are gaining momentum, calling for new elections to address what they see as a crisis in governance...<br>... (continúa con 3500 palabras)",
+        "writer": "Michael O'Sullivan",
+        "aboutWriter": "Michael O'Sullivan is a political journalist with a focus on UK politics and its evolving role post-Brexit.",
+        "picture": "images/politics2.jpg"
+      },
+      {
+        "epigraph": "Global tensions rise",
+        "headline": "Diplomatic Standoff Threatens Global Stability",
+        "subtitle": "International relations are at a breaking point as major powers face off",
+        "lead": "What began as a diplomatic disagreement has escalated into a global standoff with potential repercussions for world peace.",
+        "body": "The international community is on edge as tensions between key global powers continue to rise. Diplomatic efforts to resolve disputes over territorial claims, trade, and cybersecurity have so far been unsuccessful. Countries such as the United States, China, and Russia are engaged in a series of confrontations, with sanctions and military posturing escalating the situation. Analysts warn that if the current standoff is not resolved soon, it could lead to economic fallout and even the possibility of conflict. Despite ongoing negotiations, the prospect of de-escalation seems distant, and the world watches with bated breath as global leaders navigate this precarious situation...<br>... (continúa con 3500 palabras)",
+        "writer": "Elena Petrova",
+        "aboutWriter": "Elena Petrova is an expert in international relations, reporting on global diplomacy and conflicts for over 15 years.",
+        "picture": "images/politics3.jpg"
+      }
+    ],
+    "politicsNews-cards": [ 
+    {
+      "epigraph": "A critical moment for the EU",
+      "headline": "European Union Considers Major Expansion",
+      "subtitle": "The implications of a growing EU.",
+      "picture": "images/politics1.jpg"
+    },
+    {
+      "epigraph": "A nation at a crossroads",
+      "headline": "UK Faces Economic and Political Uncertainty",
+      "subtitle": "Challenges facing the UK in today's climate.",
+      "picture": "images/politics2.jpg"
+    },
+    {
+      "epigraph": "Global tensions rise",
+      "headline": "Diplomatic Standoff Threatens Global Stability",
+      "subtitle": "Navigating through heightened international tensions.",
+      "picture": "images/politics3.jpg"
+    }
+]
+  }
+  

@@ -36,17 +36,20 @@
     {
       "epigraph": "Breaking boundaries in tennis",
       "headline": "Historic Victory at Wimbledon 2024",
-      "picture": "images/sport1.jpg"
-    },
-    {
+      "subtitle": "A newcomer shocks the world with her stunning performance",
+      "picture": "assets/images/sport1.jpg"
+  },
+  {
       "epigraph": "The rise of American football stars",
       "headline": "Unstoppable Force: The Rise of Quarterback David Stone",
-      "picture": "images/sport2.jpg"
-    },
-    {
+      "subtitle": "David Stone is redefining the game with his incredible skills",
+      "picture": "assets/images/sport2.jpg"
+  },
+  {
       "epigraph": "A new dawn for cycling",
       "headline": "Tour de France 2024: The Underdog Triumphs",
-      "picture": "images/sport3.jpg"
-    }
+      "subtitle": "An unexpected victory shakes the cycling world",
+      "picture": "assets/images/sport3.jpg"
+  }
   ]
 }
