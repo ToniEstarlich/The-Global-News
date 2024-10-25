@@ -1,12 +1,13 @@
 .breaking-news {
+    left: 0;
+    bottom: 0;
     font-family: Arial, sans-serif;
     width: 80%;
     position: fixed; /* Fixed position at the bottom */
-    left: 0;
-    bottom: 9;
     z-index: 1000; /* Ensure it is above other content */
     font-size: 27%;
     margin-left: 10%;
+    margin-bottom: 1%;
 }
 
 .breaking-news-yellow {

@@ -13,51 +13,62 @@
    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
    
    <!--bootstrap link and script-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/nabvar.css">
-
-    <!--Breaking News CSS-->
     <link rel="stylesheet" href="css/breaking-news.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/header.css">
     
     <!-- OwlCarousel CSS -->
-    <link rel="stylesheet" href="css/cards-sliders.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     
     <link rel="stylesheet" href="css/cards.css">
     <link rel="stylesheet" href="css/Weather.css">
+    <link rel="stylesheet" href="css/slides-card.css">
     <link rel="stylesheet" href="css/footer.css">
     <title>My Project</title>
 </head>
 <body>
      <!-- Use the custom components-->
-     <navbar-component></navbar-component> 
-     <header-component id="home"></header-component>
-     <Breakingnews-component></Breakingnews-component>
-     <politics-component id="politicsNews"></politics-component>
-     <business-component id="businessNews"></business-component>
-     <tech-component id="techNews"></tech-component>
-     <sport-component id="sportsSection"></sport-component> 
-     <cardslider-component></cardslider-component>
-     <footer-component></footer-component>
+    <nav>
+        <navbar-component></navbar-component> 
+    </nav>
+     
+     <header style="margin-top: 6%;">
+        <header-component></header-component>
+     </header>
 
+     <section style="margin-top: 6%;">
+        <Breakingnews-component></Breakingnews-component>
+        <politics-component id="politicsNews"></politics-component>
+        <business-component id="businessNews"></business-component>
+        <tech-component id="techNews"></tech-component>
+        <sport-component id="sportsSection"></sport-component>
+        <cardslides-component style="margin-top: 10%;"></cardslides-component>
+     </section>
+      
+     <footer>
+        <footer-component></footer-component>
+     </footer>
+     
     <script src="js/scripts.js"></script>
     <script src="components/navbar.js"></script>
     <script src="components/header.js"></script>
     <script src="components/weather.js"></script>
+   
     <!-- the  script card slider -->
-    <script src="components/cards-slider.js"></script>
+    
     <script src="components/Breaking-news.js"></script>
     <script src="components/politics-section.js"></script>
     <script src="components/business-section.js"></script>
     <script src="components/technoloy-section.js"></script>
     <script src="components/sport-section.js"></script>
+    <script src="components/slide-card.js"></script>
     <script src="components/footer.js"></script>
     
     <!-- jQuery ( complete version) -->

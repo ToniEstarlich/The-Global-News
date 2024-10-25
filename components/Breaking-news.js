@@ -58,24 +58,25 @@ class BreakingNewsComponent extends HTMLElement {
         </div>
         `;
 
-        // Configuración de la animación
-        const newsList = this.querySelector('#breaking-news-list');
-        const duration = 40; // Adjusted speed for a slower scroll
+        // Animation setup
+const newsList = this.querySelector('#breaking-news-list');
+const duration = 20; // Speed up the scrolling
 
-        // Set the animation duration
-        const listWidth = newsList.scrollWidth;
-        const containerWidth = newsList.parentElement.offsetWidth;
-        const totalDistance = listWidth + containerWidth;
+// Set the animation duration
+const listWidth = newsList.scrollWidth;
+const containerWidth = newsList.parentElement.offsetWidth;
+const totalDistance = listWidth + containerWidth;
 
-        // Adjust duration based on total distance to ensure smooth and slower movement
-        newsList.style.animationDuration = `${(totalDistance / containerWidth) * duration}s`;
+// Adjust duration based on total distance to ensure smooth movement
+newsList.style.animationDuration = `${(totalDistance / containerWidth) * duration}s`;
 
-        // Update the clock every second
-        setInterval(() => {
-            const now = new Date();
-            const options = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
-            document.getElementById('clock').innerText = now.toLocaleTimeString('en-US', options);
-        }, 500);
+// Update the clock every second
+setInterval(() => {
+    const now = new Date();
+    const options = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+    document.getElementById('clock').innerText = now.toLocaleTimeString('en-US', options);
+}, 1000); // Keeps the update every second
+
     }
 }
 

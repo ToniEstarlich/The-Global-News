@@ -95,9 +95,9 @@ h5 {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-.active {
+/*.active {
   background-color: rgba(255, 255, 255, 0.7);
-}
+}*/ /*change this because give me problem with the cards slides*/
 
 .last {
   min-width: 150px;

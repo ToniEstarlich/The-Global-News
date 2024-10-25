@@ -28,7 +28,7 @@ body{
     width: 6px;
 }
 .topHeadlines .right .topNews::-webkit-scrollbar-thumb{
-    background-color: #777;
+    background-color: #777; 
 }
 
 .news-title {

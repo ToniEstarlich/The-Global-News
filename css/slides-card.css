@@ -1,0 +1,72 @@
+/* Default card style */
+.post-slide {
+  position: relative;
+  width: 100%; /* Automatic width adjustment */
+  height: auto; /* Automatically adjusts height */
+  max-width: 300px; /* Maximum size on larger screens */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  margin: 20px auto; /* Center on smaller screens */
+  border-radius: 16px;
+  margin-top: 30%;
+}
+
+.post-img {
+  width: 100%;
+  height: 200px; /* Fixed height for images */
+  position: relative;
+}
+
+.post-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.headline-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6); /* Dark background with opacity */
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.post-title {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.post-slide:hover,
+.post-title:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.post-slide:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Adjustments for small screens (smartphones) */
+@media (max-width: 600px) {
+  .post-slide {
+    width: 90%; /* Reduce card size */
+    max-width: 280px; /* Maximum size for smaller screens */
+    height: auto;
+  }
+
+  .post-title {
+    font-size: 0.9rem; /* Reduce font size */
+  }
+
+  .headline-overlay {
+    font-size: 0.9rem; /* Adjust text size in overlay */
+    padding: 8px;
+  }
+}
+

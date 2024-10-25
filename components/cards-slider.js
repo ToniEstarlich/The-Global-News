@@ -1,13 +1,13 @@
 class cardslider extends HTMLElement {
   connectedCallback() {
-    // Datos JSON que deseas mezclar
+    //  JSON mix
     const newsData = {
       "politicsNewsCards": [
         {
           "epigraph": "Election season heats up",
           "headline": "2024 Presidential Election: Key Issues and Candidates",
           "subtitle": "An overview of the upcoming election landscape.",
-          "picture": "/assets/images/politics1.jpg"
+          "picture": "assets/images/politics1.jpg"
         },
         {
           "epigraph": "Global policies face scrutiny",
@@ -91,9 +91,9 @@ class cardslider extends HTMLElement {
     const addSlides = (newsArray) => {
       newsArray.forEach(news => {
         slidesHtml += `
-          <div class="post-slide">
-            <div class="post-img">
-              <img src="${news.picture}" alt="" style="height:200px;">
+          <div class="post-slide" >
+            <div class="post-img" >
+              <img src="${news.picture}" alt="">
               <a href="#" class="over-layer"><i class="fa fa-link"></i></a>
             </div>
             <div class="post-content">
@@ -101,7 +101,7 @@ class cardslider extends HTMLElement {
                 <a href="#">${news.headline}</a>
               </h3>
               <p class="post-description">${news.subtitle}</p>
-              <span class="post-date"><i class="fa fa-clock-o"></i>${news.epigraph}</span>
+              <span class="post-date"><i class="fa fa-clock-o"></i>${news.epigraph}</span><br>
               <a href="#" class="read-more">read more</a>
             </div>
           </div>
@@ -109,7 +109,7 @@ class cardslider extends HTMLElement {
       });
     };
 
-    // Agregar las slides de cada categoría
+    // add the  slides of any category
     addSlides(newsData.politicsNewsCards);
     addSlides(newsData.businessNewsCards);
     addSlides(newsData.technologyNewsCards);
@@ -127,16 +127,16 @@ class cardslider extends HTMLElement {
       </div>
     `;
 
-    // Inicializar el carrusel
+    // start carrusel
     $(document).ready(function() {
       $("#news-slider").owlCarousel({
-        items: 3,
-        loop: true,
-        margin: 10,
-        nav: true,
-        autoplay: true,
-        autoplayTimeout: 3000,
-        autoplayHoverPause: true
+        items: 5, // Display 5 items at once
+        loop: true, // Infinite loop
+        margin: 3, // Margin between items
+        nav: true, // Show navigation arrows
+        autoplay: true, // Autoplay enabled
+        autoplayTimeout: 3000, // Delay between slides (in ms)
+        autoplayHoverPause: true // Pause autoplay on hover
       });
     });
   }
