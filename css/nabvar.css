@@ -37,8 +37,8 @@ nav ul {
 nav ul li {
     margin: 0 5px; /* Reduced margin for better fit on smaller screens */
     padding: 0 10px;
-    border-left: 1px solid #fff0;
-    border-right: 1px solid #fff0;
+    border-left: 1px solid rgba(222, 222, 222, 0);
+    border-right: 1px solid rgba(240, 240, 240, 0);
     transition: 0.3s;
 }
 

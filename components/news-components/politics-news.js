@@ -46,7 +46,7 @@ const politicsNews = [
         "writer": "Laura Martinez",
         "aboutWriter": "Laura Martinez is a seasoned European affairs correspondent, covering the EU and its policies for over a decade.",
         "source": "Political News Network",
-        "picture": "images/politics1.jpg"  // Add the appropriate image path here
+        "picture": "../../assets/images/politics1.jpg"  // Add the appropriate image path here
     },
     {
       "epigraph": "A nation at a crossroads",
@@ -56,7 +56,7 @@ const politicsNews = [
       "body": "The United Kingdom is once again in the throes of political instability as economic woes continue to plague the nation. Inflation is rising, unemployment is creeping up, and public services are under immense pressure. Meanwhile, the British government is grappling with internal divisions, particularly within the ruling party. Prime Minister James Baker recently faced a leadership challenge, narrowly surviving a vote of no confidence. As Westminster struggles to unite around a coherent strategy for economic recovery, opposition parties are gaining momentum, calling for new elections to address what they see as a crisis in governance...<br>... (continúa con 3500 palabras)",
       "writer": "Michael O'Sullivan",
       "aboutWriter": "Michael O'Sullivan is a political journalist with a focus on UK politics and its evolving role post-Brexit.",
-      "picture": "images/politics2.jpg"
+      "picture": "../../assets/images/politics2.jpg"
     },
     {
       "epigraph": "Global tensions rise",
@@ -66,7 +66,7 @@ const politicsNews = [
       "body": "The international community is on edge as tensions between key global powers continue to rise. Diplomatic efforts to resolve disputes over territorial claims, trade, and cybersecurity have so far been unsuccessful. Countries such as the United States, China, and Russia are engaged in a series of confrontations, with sanctions and military posturing escalating the situation. Analysts warn that if the current standoff is not resolved soon, it could lead to economic fallout and even the possibility of conflict. Despite ongoing negotiations, the prospect of de-escalation seems distant, and the world watches with bated breath as global leaders navigate this precarious situation...<br>... (continúa con 3500 palabras)",
       "writer": "Elena Petrova",
       "aboutWriter": "Elena Petrova is an expert in international relations, reporting on global diplomacy and conflicts for over 15 years.",
-      "picture": "images/politics3.jpg"
+      "picture": "../../assets/images/politics3.jpg"
     }
 ];
 

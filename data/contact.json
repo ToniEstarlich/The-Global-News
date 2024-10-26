@@ -1,0 +1,20 @@
+{
+    "contactInfo": {
+        "address": {
+            "street": "123 Fleet Street",
+            "city": "London",
+            "postalCode": "EC4A 2BB",
+            "country": "United Kingdom"
+        },
+        "phone": "+44 20 7946 0958",
+        "email": "contact@theglobalnews.com",
+        "businessHours": {
+            "weekdays": "9:00 AM - 6:00 PM",
+            "saturday": "10:00 AM - 4:00 PM",
+            "sunday": "Closed"
+        }
+    },
+    "locationDescription": {
+        "description": "The Global News headquarters are located in the heart of London, at the iconic Fleet Street, known for its rich history in journalism. Our team is available for inquiries during business hours, and we are committed to responding to every question and comment with the highest level of professionalism."
+    }
+}

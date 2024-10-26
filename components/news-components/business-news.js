@@ -46,7 +46,7 @@ const businessNews = [
         "writer": "Marie Dupont",
         "aboutWriter": "Marie Dupont is a business journalist who covers European economic policy, with a focus on sustainability and corporate responsibility.",
         "source": "European Business Journal",
-        "picture": "images/business1.jpg"  // Add the appropriate image path here
+        "picture": "../../assets/images/business1.jpg"  // Add the appropriate image path here
     },
     {
       "epigraph": "Global pandemic reshapes business",
@@ -56,7 +56,7 @@ const businessNews = [
       "body": "The COVID-19 pandemic of 2020 was an event that radically altered the global business landscape. As countries went into lockdown and supply chains were disrupted, businesses across every sector were forced to adapt to a rapidly changing environment. Some companies, particularly those in hospitality, travel, and retail, faced unprecedented challenges and, in many cases, closure. Others, particularly in e-commerce, technology, and healthcare, saw rapid growth as consumer behavior shifted. One of the most significant changes brought about by the pandemic was the rise of remote work, which transformed how companies operated and how employees viewed their work-life balance.\n\nFor many businesses, the pandemic accelerated trends that were already underway, such as digital transformation and the automation of services. As more companies shifted to online platforms, the demand for cloud computing, cybersecurity, and AI-based solutions skyrocketed. This shift has led to the rise of hybrid work models, which allow employees to work both remotely and in-office, providing flexibility that was once unthinkable for many industries.\n\nIn addition to these technological advancements, the pandemic also reshaped global supply chains. With factory closures and transport restrictions, many companies began to rethink their dependence on single suppliers or specific regions, such as Asia, for their manufacturing needs. The focus has since shifted towards creating more resilient supply chains, with an emphasis on nearshoring and diversifying suppliers.\n\nThe pandemic also sparked a new conversation about corporate responsibility and sustainability. As businesses grappled with the economic fallout, many were forced to reconsider their environmental impact, and consumer expectations around corporate ethics and sustainability rose dramatically. Today, companies are not only measured by their financial success but also by their contributions to social and environmental causes, a trend that is expected to grow in the coming years.\n\nThe lasting impact of COVID-19 on global business is profound. While some industries continue to struggle with the aftershocks, others have emerged stronger, having adapted to new ways of working and engaging with customers. As we look to the future, it's clear that the pandemic has permanently reshaped the business world, creating both challenges and opportunities...<br>...(continúa con 3500 palabras)",
       "writer": "Rachel Johnson",
       "aboutWriter": "Rachel Johnson is a business and technology journalist with expertise in global economic trends and digital transformation.",
-      "picture": "images/business2.jpg"
+      "picture": "../../assets/images/business2.jpg"
     },
     {
       "epigraph": "Global markets face uncertainty",
@@ -66,7 +66,7 @@ const businessNews = [
       "body": "Global businesses are facing one of their biggest challenges in recent history as inflation continues to rise and supply chain disruptions persist. The COVID-19 pandemic, combined with geopolitical tensions and labor shortages, has created a scenario in which companies across all industries are struggling to keep up with demand while managing soaring costs. For many, the issues began in 2020, when factories in key manufacturing regions were forced to shut down. Since then, the recovery has been slow and uneven, with ongoing disruptions in transportation and logistics. As inflation hits record levels in several major economies, businesses are having to pass on higher costs to consumers, leading to concerns about decreased demand and economic slowdowns...<br>...(continúa con 3500 palabras)",
       "writer": "Emily Zhang",
       "aboutWriter": "Emily Zhang is a global business correspondent with a focus on international markets, inflation, and supply chain dynamics.",
-      "picture": "images/business3.jpg"
+      "picture": "../../assets/images/business3.jpg"
     }
 ];
 
