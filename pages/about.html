@@ -20,8 +20,9 @@
     
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/nabvar.css">
+    <link rel="stylesheet" href="../css/about-header.css">
+    <link rel="stylesheet" href="../css/time-line.css">
     <link rel="stylesheet" href="../css/cards-journalist.css">
-    
     
     <!-- OwlCarousel CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
@@ -32,15 +33,24 @@
 </head>
 <body>
      <!-- Use the custom components-->
-    <nav>
-        <navbar-component></navbar-component> 
+     <nav>
+        <navbar-component></navbar-component>
     </nav>
-     
-     <header style="margin-top: 6%;">
-        
-     </header>
 
-     <section style="margin-top: 6%;">
+     <header style="margin-top: 5%;">
+        <about-header></about-header>
+     </header>
+    
+     <section>
+        <!--time line "the global News"-->
+        <div class="info">
+            <div id="tribute-info">
+                <h3 class="info-title">Here's a time line of The Global News' journey:</h3>
+                <ul id="timeline-list"></ul>
+            </div>
+        </div>
+        <!--End of the time line-->
+        
         <div id="journalist-cards-container"></div>
      </section>
       
@@ -49,7 +59,9 @@
      </footer>
      
     <script src="../js/scripts.js"></script>
+    <script src="../components/About-components/about-header.js"></script>
     <script src="../components/navbar.js"></script>
+    <script src="../components/About-components/time-line.js"></script>
     <script src="../components/About-components/cards-journalist.js"></script>
     <script src="../components/footer.js"></script>
     

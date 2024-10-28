@@ -53,7 +53,7 @@ function createJournalistCards() {
 
     journalists.forEach(journalist => {
         const cardHTML = `
-            <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="card-background col-md-3 col-sm-6 col-xs-12">
                 <div class="card">
                     <div class="cover" style="background-image: url('${journalist.photo}'); background-size: cover;">
                         <h1>${journalist.name}</h1>

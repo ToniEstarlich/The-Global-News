@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;600&display=swap');
 
 /* Definición de fuentes y fondo para esta sección específica */
+.card-background {
+    margin-bottom: 10%;
+    margin-top: 7%;
+}
+
 .custom-body {
     font-family: 'Oswald', sans-serif;
-    background-color: #212121;
 }
 
 .custom-section {
@@ -23,9 +27,10 @@
     position: relative;
     height: 400px;
     width: 100%;
-    margin: 10px 0;
+    margin: 0px 0;
     transition: ease all 2.3s;
     perspective: 1200px;
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 150%); 
 }
 
 .card:hover .cover {

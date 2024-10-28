@@ -1,10 +1,31 @@
 class NavbarComponent extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
+         <nav class="navbar navbar-expand-md  navbar-dark">
+  <a class="navbar-brand" href="#">G<h5>N</h5></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="../index.html" id="homeLink">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="../pages/Contact.html" id="homeLink">About</a
+      </li>
+      <li class="nav-item">
+        <a href="./index.html" id="homeLink">Contact</a
+      </li>    
+    </ul>
+  </div>  
+</nav>          
+                
+
+
+     <!--
             <div class="header">
-                <div class="logo">
-                    NEWS
-                </div>
+               <h6 class="main-title"><span class="thin">the Global</span> news</h6>
                 <nav>
                     <button class="navbar-toggler" type="button">
                         <span class="navbar-toggler-icon open fa-solid fa-bars-staggered"></span>
@@ -20,7 +41,7 @@ class NavbarComponent extends HTMLElement {
                         </ul>
                     </div>
                 </nav>
-            </div>
+            </div>-->
         `;
 
         document.addEventListener("DOMContentLoaded", () => {

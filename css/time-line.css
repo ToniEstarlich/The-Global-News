@@ -1,0 +1,47 @@
+.time-line {
+    text-align: center;
+    padding: 40px 0 10px 0;
+    /* font-size: 13px; */
+}
+
+figure {
+    text-align: center;
+}
+
+#title {
+    color: #333;
+}
+
+.info {
+    padding: 40px;
+}
+
+#tribute-info {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#tribute-info,
+figcaption,
+p {
+    color: #fbfbfb;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+.info-title {
+    text-align: center;
+}
+
+.link {
+    text-align: center;
+}
+
+.year {
+    color: #235d9f;
+    font-size: 120%;
+    margin-top: 40%;
+}
