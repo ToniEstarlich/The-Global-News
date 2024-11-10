@@ -131,6 +131,10 @@
     .breaking-news {
         font-size: 16px; /* Reduce font size on small screens */
     }
+
+    .breaking-news-main-title {
+        font-size: 46%;
+    }
     
     .breaking-news-yellow, .breaking-news-black {
         height: 40px; /* Reduced size */

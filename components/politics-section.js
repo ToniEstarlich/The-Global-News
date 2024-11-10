@@ -6,19 +6,22 @@ class PoliticsComponent extends HTMLElement {
                     "epigraph": "Election season heats up",
                     "headline": "2024 Presidential Election: Key Issues and Candidates",
                     "subtitle": "An overview of the upcoming election landscape.",
-                    "picture": "assets/images/politics1.jpg"
+                    "picture": "assets/images/politics1.jpg",
+                    "url": "./pages/politics-news/politics1.html"
                 },
                 {
                     "epigraph": "Global policies face scrutiny",
                     "headline": "Climate Change Policies: A Global Challenge",
                     "subtitle": "Examining international efforts to combat climate change.",
-                    "picture": "assets/images/politics2.jpg"
+                    "picture": "assets/images/politics2.jpg",
+                    "url": "./pages/politics-news/politics2.html"
                 },
                 {
                     "epigraph": "New legislation proposed",
                     "headline": "Healthcare Reform: What You Need to Know",
                     "subtitle": "A deep dive into proposed changes to the healthcare system.",
-                    "picture": "assets/images/politics3.jpg"
+                    "picture": "assets/images/politics3.jpg",
+                    "url": "./pages/politics-news/politics3.html"
                 }
             ]
         };
@@ -32,14 +35,14 @@ class PoliticsComponent extends HTMLElement {
                     <div class="content-wrapper">
                         ${newsData.politicsNewsCards.map(politics => `
                             <div class="news-card">
-                                <a href="#" class="news-card__card-link"></a>
-                                <img src="${politics.picture}" alt="" class="news-card__image">
+                                <a href="${politics.url}" class="news-card__card-link"></a>
+                                <img src="${politics.picture}" alt="" class="news-card__image" href="${politics.url}">
                                 <div class="news-card__text-wrapper">
                                     <h2 class="news-card__title">${politics.headline}</h2>
                                     <div class="news-card__post-date">${politics.date || 'Jan 29, 2018'}</div>
                                     <div class="news-card__details-wrapper">
                                         <p class="news-card__excerpt">${politics.subtitle}</p>
-                                        <a href="#" class="news-card__read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
+                                        <a href="${politics.url}" class="news-card__read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
                                     </div>
                                 </div>
                             </div>

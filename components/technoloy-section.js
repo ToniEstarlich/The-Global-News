@@ -6,19 +6,22 @@ class TechComponent extends HTMLElement {
                     "epigraph": "AI reshapes industries",
                     "headline": "The Future of Artificial Intelligence",
                     "subtitle": "Exploring the potential of AI across sectors.",
-                    "picture": "assets/images/tech1.jpg"
+                    "picture": "assets/images/tech1.jpg",
+                    "url": "./pages/tech-news/tech1.html"
                 },
                 {
                     "epigraph": "5G revolution begins",
                     "headline": "5G Networks Are Changing the Digital Landscape",
                     "subtitle": "How 5G is transforming connectivity.",
-                    "picture": "assets/images/tech2.jpg"
+                    "picture": "assets/images/tech2.jpg",
+                    "url": "./pages/tech-news/tech2.html"
                 },
                 {
                     "epigraph": "Tech giants face scrutiny",
                     "headline": "Big Tech Under Fire",
                     "subtitle": "The ongoing debate over regulation and ethics.",
-                    "picture": "assets/images/tech3.jpg"
+                    "picture": "assets/images/tech3.jpg",
+                    "url": "./pages/tech-news/tech3.html"
                 }
             ]
         };
@@ -31,14 +34,14 @@ class TechComponent extends HTMLElement {
                 <div class="content-wrapper">
                     ${newsData.technologyNews.map(tech => `
                         <div class="news-card">
-                            <a href="#" class="news-card__card-link"></a>
-                            <img src="${tech.picture}" alt="" class="news-card__image">
+                            <a href="${tech.url}" class="news-card__card-link"></a>
+                            <img src="${tech.picture}" alt="" class="news-card__image" href="${tech.url}">
                             <div class="news-card__text-wrapper">
                                 <h2 class="news-card__title">${tech.headline}</h2>
                                 <div class="news-card__post-date">${tech.date || 'Jan 29, 2018'}</div>
                                 <div class="news-card__details-wrapper">
                                     <p class="news-card__excerpt">${tech.subtitle}</p>
-                                    <a href="#" class="news-card__read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
+                                    <a href="${tech.url}" class="news-card__read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
                                 </div>
                             </div>
                         </div>

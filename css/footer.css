@@ -1,8 +1,10 @@
 .footer{
     width: 100%;
     padding: 50px 50px 0px;
-    background-color: #0a0a18;
+    background-color: #11111e;
     min-height: 200px;
+    margin-top: 0;
+
 }
 .footer .box{
     width: 100%;

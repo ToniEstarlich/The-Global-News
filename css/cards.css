@@ -127,12 +127,12 @@
 }
 
 @media (min-width: 600px) {
-  /* Estilos para pantallas medianas */
+  
 }
 
 @media (min-width: 900px) {
   .news-card {
-    height: 20rem; /* Altura para pantallas grandes */
+    height: 20rem; 
   }
   
   .news-card:hover .news-card__details-wrapper {
