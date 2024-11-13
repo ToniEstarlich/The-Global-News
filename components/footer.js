@@ -70,10 +70,10 @@ class FooterComponent extends HTMLElement {
                                 <div>Email - <span>${email}</span></div>
                                 <div>Address - <span>${address.street}, ${address.city}, ${address.country}</span></div>
                                 <div>Business Hours - 
-                                    <ul>
-                                        <li>Weekdays: ${businessHours.weekdays}</li>
-                                        <li>Saturday: ${businessHours.saturday}</li>
-                                        <li>Sunday: ${businessHours.sunday}</li>
+                                    <ul class="schedules-ul">
+                                        <li class="schedules-li">Weekdays: ${businessHours.weekdays}</li>
+                                        <li class="schedules-li" >Saturday: ${businessHours.saturday}</li>
+                                        <li class="schedules-li">Sunday: ${businessHours.sunday}</li>
                                     </ul>
                                 </div>
                             </div>

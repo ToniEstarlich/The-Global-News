@@ -26,26 +26,28 @@ class NavbarComponent extends HTMLElement {
 
         // Render the navbar with the calculated paths
         this.innerHTML = `
-            <nav class="navbar navbar-expand-md navbar-dark">
+         <nav class="navbar navbar-expand-md  navbar-dark">
+                <a class="navbar-brand" href="${homePath}"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="${homePath}" id="homeLink">Home</a>
+                            <a class="nav-link" href="${homePath}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="${aboutPath}" id="aboutLink">About</a>
+                            <a class="nav-link" href="${aboutPath}">About</a>
                         </li>
                         <li class="nav-item">
-                            <a href="${contactPath}" id="contactLink">Contact</a>
+                            <a class="nav-link" href="${contactPath}">Contact</a>
                         </li>    
                     </ul>
                 </div>  
-            </nav>          
+            </nav>       
         `;
     }
 }
 
+// Define the custom navbar element
 window.customElements.define('navbar-component', NavbarComponent);

@@ -1,21 +1,10 @@
 .navbar {
     z-index: 11;
-    margin-top: 5%;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    z-index: 11;
+    margin-top: 2%;
     position: fixed;
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
-}
+
 
 nav ul li {
     margin: 0 5px; /* Reduced margin for better fit on smaller screens */
@@ -41,19 +30,33 @@ nav ul li a {
     z-index: 13;
 }
 
-/* Responsive adjustments */
+
+
+
+/* Media queries for responsive adjustments */
 @media (max-width: 900px) {
-   
     .logo {
-        font-size: 24px; /* Smaller logo size */
+        font-size: 24px;
+    }
+
+    /* Stack navbar items vertically on smaller screens */
+    .navbar-collapse {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
     }
 }
 
 @media (max-width: 450px) {
     .logo {
-        font-size: 20px; /* Adjust logo for very small screens */
+        font-size: 20px;
     }
-    
 }
-
-
