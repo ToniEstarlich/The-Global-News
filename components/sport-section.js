@@ -27,7 +27,7 @@ class SportComponent extends HTMLElement {
         };
 
         const sportsNewsSection = `
-            <div class="title">
+            <div class="title" id="sports">
                 <h2 class="news-title" style="text-decoration: underline; color: white; margin-left: 86px; margin-bottom: 20px; font-size: 50px;">Sports</h2>
             </div>
             <div class="newsBox"> 

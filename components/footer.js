@@ -95,7 +95,7 @@ class FooterComponent extends HTMLElement {
                     </div>
                 </div>
                 <div class="copyrights">
-                    Copyrights &copy; 2022 Coders Villa
+                    Copyrights &copy; 2024 The Gloval News
                 </div>
             </div>
         `;

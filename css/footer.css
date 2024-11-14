@@ -139,6 +139,10 @@
     letter-spacing: 1px;
 }
 
+.copyrights {
+    margin-top: -7%;
+}
+
 /* Media queries */
 @media (max-width: 1024px) {
     /* Reduced font size for better fit */

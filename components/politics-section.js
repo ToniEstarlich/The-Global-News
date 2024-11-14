@@ -27,7 +27,7 @@ class PoliticsComponent extends HTMLElement {
         };
 
         this.innerHTML = `
-            <div class="news">
+            <div class="news" id="politics">
                 <div class="title">
                     <h2 class="news-title" style="text-decoration: underline; color: white; margin-left: 86px; margin-bottom: 20px; font-size: 50px;">Politics</h2>
                 </div>
