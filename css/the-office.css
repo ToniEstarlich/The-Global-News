@@ -1,0 +1,16 @@
+.office-container{
+  align-items: center;
+}
+
+.the-office-container {
+    display: flex;
+    flex-direction: column;
+    padding: 80px 100px;
+  }
+
+.office-details {
+  align-content: center;
+  color: cadetblue;
+}
+  
+ 

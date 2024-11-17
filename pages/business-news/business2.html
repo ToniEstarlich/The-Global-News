@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--w3school link and script-->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   
+   <!--bootstrap link and script-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/nabvar.css">
+    <link rel="stylesheet" href="../../css/about-header.css">
+    
+    <!-- OwlCarousel CSS -->
+    <link rel="stylesheet" href="../../css/cards-sliders.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    
+    <link rel="stylesheet" href="../../css/breaking-news.css">
+    <link rel="stylesheet" href="../../css/the-news.css">
+    <link rel="stylesheet" href="../../css/cards.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+
+    <title>Global News</title>
+</head>
+<body>
+    <!-- Use the custom components-->
+    <nav>
+      <navbar-component></navbar-component>
+    </nav>
+  
+    <header style="margin-top:60px">
+      <about-header ></about-header>
+    </header> 
+    <div class="container" style="margin-top:30px">
+        <div class="row">
+          
+          <div class="col-sm-8">
+            <business-component news-index="1"></business-component>
+          </div>
+
+          <div class="col-sm-4">
+            <smallslider-component></smallslider-component>
+            <mix-card-component></mix-card-component>
+          </div>
+          <Breakingnews-component style="margin-top: 39rem;"></Breakingnews-component>
+        </div>
+      </div>
+    <footer-component></footer-component>
+
+    <script src="../../js/scripts.js"></script>
+    <script src="../../components/navbar.js"></script>
+    <script src="../../components/About-components/about-header.js"></script>
+    <script src="../../components/cards.js"></script>
+    <script src="../../components/small-card-slides.js"></script>
+    <script src="../../components/news-components/business-news.js"></script>
+    <!-- the  script card slider -->
+    <script src="../../components/news-components/sport-news.js"></script>
+    <script src="../../components/Breaking-news.js"></script>
+    <script src="../../components/footer.js"></script>
+    
+    <!-- jQuery ( complete version) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- OwlCarousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    
+</body>
+</html>

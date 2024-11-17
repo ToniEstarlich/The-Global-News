@@ -76,6 +76,14 @@ function renderContactForm() {
     `;
 
     document.getElementById("contact-section").appendChild(container);
+
+    // Add event listener to handle form submission and redirect
+    document.getElementById("contact-form").addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent the form's default submit action
+
+        // Redirect to the success page
+        window.location.href = "../pages/success/send-contact.html";
+    });
 }
 
 window.addEventListener('DOMContentLoaded', renderContactForm);

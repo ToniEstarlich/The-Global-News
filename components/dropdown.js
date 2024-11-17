@@ -4,8 +4,9 @@ class DropdownComponent extends HTMLElement {
          <!-- Dropdown -->
    <div class="nav-dropdown">
     <li class="nav-item dropdown">
+     <social-component></social-component>
       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-        NEWS
+      NEWS
       </a>
       <div class="dropdown-menu">
         <a class="dropdown-item" href="#sports">Sport</a>

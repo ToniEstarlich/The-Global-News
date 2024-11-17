@@ -43,8 +43,8 @@ class NavbarComponent extends HTMLElement {
                             <a class="nav-link" href="${contactPath}">Contact</a>
                         </li>
                     </ul>
-                </div>  
-            </nav>       
+                </div>
+            </nav>   
         `;
     }
 }
