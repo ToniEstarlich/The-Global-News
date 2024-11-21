@@ -58,15 +58,13 @@ function createJournalistCards() {
             <div class="cover">
                 <img src="${journalist.photo}" alt="${journalist.name}" class="journalist-photo">
                 <h1>${journalist.name}</h1>
-                <span class="price">
-                    <a href="${journalist.social.facebook}" class="icon" target="_blank"><i class="fab fa-facebook"></i></a>
-                    <a href="${journalist.social.twitter}" class="icon"  target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="${journalist.social.linkedin}" class="icon" target="_blank"><i class="fab fa-linkedin"></i></a>
-                </span>
             </div>
             <div class="card-back">
                 <a href="#" class="speciality">${journalist.specialty}</a>
                 <p class="bio">${journalist.bio}</p>
+                <span class="price">
+                    <social-component></social-component>
+                </span>
             </div>
         </div>
     </div>

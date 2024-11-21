@@ -27,6 +27,7 @@ class NavbarComponent extends HTMLElement {
         // Render the navbar with the calculated paths
         this.innerHTML = `
          <nav class="navbar navbar-expand-md  navbar-dark">
+                <social-component></social-component>
                 <a class="navbar-brand" href="${homePath}"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                     <span class="navbar-toggler-icon"></span>
@@ -44,7 +45,7 @@ class NavbarComponent extends HTMLElement {
                         </li>
                     </ul>
                 </div>
-            </nav>   
+            </nav> 
         `;
     }
 }

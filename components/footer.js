@@ -78,9 +78,6 @@ class FooterComponent extends HTMLElement {
                                 </div>
                             </div>
                             <div class="icon">
-                                <i class="fa-brands fa-square-facebook"></i>
-                                <i class="fa-brands fa-instagram"></i>
-                                <i class="fa-brands fa-youtube"></i>
                             </div>
                         </div>
                     </div>
@@ -90,6 +87,7 @@ class FooterComponent extends HTMLElement {
                             <div class="email">
                                 <input type="email" placeholder="Enter Your Email Here">
                                 <a href="${subscribePath}"><button>Subscribe</button></a>
+                                <hr><social-component></social-component>
                             </div>
                         </div>
                     </div>
