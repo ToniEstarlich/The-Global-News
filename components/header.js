@@ -100,8 +100,8 @@ class headerComponent extends HTMLElement {
           ${sliderItems}
         </div>
         <nav class='nav-header'>
-          <ion-icon class='btn prev' name="arrow-back-outline"></ion-icon>
-          <ion-icon class='btn next' name="arrow-forward-outline"></ion-icon>
+          <ion-icon class='btn prev' name="arrow-back-outline"><</ion-icon>
+          <ion-icon class='btn next' name="arrow-forward-outline">></ion-icon>
         </nav>
       </div>
     `;

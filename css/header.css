@@ -54,7 +54,6 @@
   opacity: 1; /* Image can be hidden with 0 */
 }
 
-/* Changes to accommodate more items */
 .item:nth-child(1),
 .item:nth-child(2) {
   left: 0;
@@ -91,7 +90,6 @@
   transition-delay: calc(var(--speed) * 0.6);
 }
 
-/* Additional items up to 11 */
 .item:nth-child(n+7) {
   left: calc(50% + calc(var(--width) * (n - 1)) + calc(var(--gap) * (n - 1)));
   opacity: 0;
@@ -145,8 +143,6 @@ button:hover {
   animation: show var(--speed) ease-in-out calc(var(--speed) / 2) forwards;
 }
 
-
-
 @keyframes show {
   0% {
     filter: blur(10px);
@@ -174,10 +170,10 @@ button:hover {
 .btn {
   background-color: rgba(255, 255, 255, 0.9);
   color: rgba(0, 0, 0, 0.9);
-  padding: 0.75rem;
   border-radius: 50%;
   cursor: pointer;
   transition: background var(--speed), color var(--speed);
+  font-size: 20px; /* icon size large enough */
 }
 
 .btn:hover {
@@ -186,9 +182,40 @@ button:hover {
 }
 
 /* Responsiveness */
+@media (max-width: 1024px) {
+  .content .title {
+    font-size: 0.8rem;
+  }
+  .content .description {
+    font-size: 0.65rem;
+  }
+  button {
+    font-size: 0.7rem;
+  }
+  .item {
+    width: calc(100% - 10px);
+    height: auto;
+    margin: 5px;
+    animation: none !important; /* Stop animations */
+    transition: none !important; /* Stop transitions */
+  }
+
+  .item::after {
+    box-shadow: none; /* Remove any animation-like effects */
+  }
+
+  .content {
+    display: flex;
+    opacity: 1;
+    filter: none;
+    transform: translateY(0);
+    animation: none !important;
+  }
+}
+
 @media (max-width: 900px) {
   .content {
-    left: 5rem; /* Adjusted for smaller screens */
+    left: 5rem;
   }
   .content .title {
     font-size: 1rem;
@@ -200,45 +227,91 @@ button:hover {
     font-size: 0.9rem;
   }
   .item {
-    width: calc(33.33% - 10px); /* Adjust width for 3 items on tablets and add small margin */
-    height: calc((33.33% - 10px) * 1.5); /* Maintain aspect ratio */
-    margin: 5px; /* Add small margin between items */
+    width: calc(33.33% - 10px);
+    height: calc((33.33% - 10px) * 1.5);
+    margin: 5px;
   }
 }
 
-@media (max-width: 650px) {
-  .content {
-    left: 2rem; /* Further adjustment for mobile */
-  }
+@media (max-width: 768px) {
   .content .title {
-    font-size: 0.9rem;
-  }
-  .content .description {
-    font-size: 0.75rem; /* Smaller font size for mobile */
-  }
-  button {
     font-size: 0.8rem;
   }
-  .item {
-    width: calc(50% - 10px); /* Adjust width for 2 items on smartphones with small margin */
-    height: calc((50% - 10px) * 1.5); /* Maintain aspect ratio */
-    margin: 5px; /* Add margin between items */
-  }
-}
-
-@media (max-width: 450px) {
-  .content .title {
-    font-size: 0.8rem; /* Adjust title size for small devices */
-  }
   .content .description {
-    font-size: 0.65rem; /* Adjust description size for small devices */
+    font-size: 0.65rem;
   }
   button {
     font-size: 0.7rem;
   }
   .item {
-    width: calc(100% - 10px); /* Full width for very small devices with margin */
-    height: auto; /* Allow height to adjust automatically */
-    margin: 5px; /* Add margin for small devices */
+    width: calc(100% - 10px);
+    height: auto;
+    margin: 5px;
+    animation: none !important; /* Stop animations */
+    transition: none !important; /* Stop transitions */
+  }
+
+  .item::after {
+    box-shadow: none; /* Remove any animation-like effects */
+  }
+
+  .content {
+    display: flex;
+    opacity: 1;
+    filter: none;
+    transform: translateY(0);
+    animation: none !important;
+  }
+}
+
+
+@media (max-width: 650px) {
+  .content {
+    left: 2rem;
+  }
+  .content .title {
+    font-size: 0.9rem;
+  }
+  .content .description {
+    font-size: 0.75rem;
+  }
+  button {
+    font-size: 0.8rem;
+  }
+  .item {
+    width: calc(50% - 10px);
+    height: calc((50% - 10px) * 1.5);
+    margin: 5px;
+  }
+}
+
+@media (max-width: 450px) {
+  .content .title {
+    font-size: 0.8rem;
+  }
+  .content .description {
+    font-size: 0.65rem;
+  }
+  button {
+    font-size: 0.7rem;
+  }
+  .item {
+    width: calc(100% - 10px);
+    height: auto;
+    margin: 5px;
+    animation: none !important; /* Stop animations */
+    transition: none !important; /* Stop transitions */
+  }
+
+  .item::after {
+    box-shadow: none; /* Remove any animation-like effects */
+  }
+
+  .content {
+    display: flex;
+    opacity: 1;
+    filter: none;
+    transform: translateY(0);
+    animation: none !important;
   }
 }

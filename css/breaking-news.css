@@ -148,3 +148,9 @@
         font-size: 12px; /* Smaller clock font size */
     }
 }
+
+@media (max-width: 768px) {
+    .breaking-news {
+        margin-bottom: 15px;
+    }
+}

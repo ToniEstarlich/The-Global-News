@@ -1,3 +1,6 @@
+.news-title {
+  margin-top: 10%;
+}
 
 .content-wrapper {
   margin: 0 auto;
@@ -126,8 +129,18 @@
   color: yellow;
 }
 
-@media (min-width: 600px) {
-  
+@media (min-width: 768px) {
+  .news-title {
+    margin-top: 15%;
+    margin-right: 30%;
+  }
+}
+
+@media (max-width: 450px) {
+  .news-title {
+    margin-top: 35%;
+    margin-right: 30%;
+  }
 }
 
 @media (min-width: 900px) {

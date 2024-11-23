@@ -31,6 +31,22 @@ body{
     background-color: #777; 
 }
 
-.news-title {
-    margin-top: 3%;
+@media (max-width: 768px) {
+    .mix.card {
+        margin-top: 10%;
+    }
 }
+
+@media (max-width: 820px) {
+    .mix-card {
+        margin-top: 12%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .mix-card {
+        margin-top: 32%;
+    }
+}
+
+

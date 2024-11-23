@@ -94,7 +94,7 @@ class MixCardsComponent extends HTMLElement {
                           <img src="${news.picture}" alt="" class="news-card__image" href="${news.url}">
                           <div class="news-card__text-wrapper">
                               <h2 class="news-card__title">${news.headline}</h2>
-                              <div class="news-card__post-date">${news.date || 'Jan 29, 2018'}</div>
+                              <div class="news-card__post-date"><date-component></date-component></div>
                               <div class="news-card__details-wrapper">
                                   <p class="news-card__excerpt">${news.subtitle}</p>
                                   <a href="${news.url}" class="news-card__read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a>

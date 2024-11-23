@@ -40,6 +40,13 @@
 }
 
 /* Responsive adjustments */
+@media (max-width: 1024px) {
+    .main-title {
+        margin-top: 3%;
+        font-size: 230%;
+    }
+}
+
 @media (max-width: 900px) {
     .large-header {
         font-size: 90%;
@@ -53,14 +60,21 @@
     }
 }
 
-@media (max-width: 450px) {
-    .large-header {
-        font-size: 55%;
+@media (max-width: 768px) {
+    .main-title {
+        margin-top: 7%;
     }
 }
 
+@media (max-width: 450px) {
+    .large-header {
+        font-size: 35%;
+    }
 
-
+    .main-title {
+        margin-top: 8%;
+    }
+}
 
 .main-title .thin { font-weight: 200; }
 
