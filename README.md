@@ -32,7 +32,7 @@ Global News embodies the ideals of journalistic freedom and technology as a mean
 ## 🖥️ Screenshots
 
 ###  **PC Screen**,  **iPad Mini**,  **Smartphone**
-<img src="./screenshots/pc-screen.jpeg" alt="PC Screen Screenshot" width="300" style="margin-top: 10px;"> <img src="./screenshots/ipad-mini.jpeg" alt="iPad Mini Screenshot" width="200"> <img src="./screenshots/smartphone.png" alt="Smartphone Screenshot" width="100"> 
+<img src="./screenshots/pc-screen.jpeg" alt="PC Screen Screenshot" width="300" style="margin-top: 10px;">        <img src="./screenshots/ipad-mini.jpeg" alt="iPad Mini Screenshot" width="100">                <img src="./screenshots/smartphone.png" alt="Smartphone Screenshot" width="50"> 
 
 ---
 
