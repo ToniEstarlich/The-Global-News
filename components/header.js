@@ -27,7 +27,7 @@ class headerComponent extends HTMLElement {
         "headline": "Unstoppable Force: The Rise of Quarterback David Stone",
         "subtitle": "David Stone is redefining the game with his incredible skills",
         "picture": "assets/images/sport2.jpg",
-        "url": "./pages/sport-news/sport2.html"
+        "url": "./pages/sports-news/sport2.html"
     },
     {
         "epigraph": "AI reshapes industries",
@@ -48,14 +48,14 @@ class headerComponent extends HTMLElement {
         "headline": "Historic Victory at Wimbledon 2024",
         "subtitle": "A newcomer shocks the world with her stunning performance",
         "picture": "assets/images/sport1.jpg",
-        "url": "./pages/sport-news/sport1.html"
+        "url": "./pages/sports-news/sport1.html"
     },
     {
         "epigraph": "A new dawn for cycling",
         "headline": "Tour de France 2024: The Underdog Triumphs",
         "subtitle": "An unexpected victory shakes the cycling world",
         "picture": "assets/images/sport3.jpg",
-        "url": "./pages/sport-news/sport3.html"
+        "url": "./pages/sports-news/sport3.html"
     },
    
       {
@@ -84,6 +84,7 @@ class headerComponent extends HTMLElement {
 
     // Generate HTML for slider items
     const sliderItems = newsData.map(item => `
+        
       <div class="item">
         <img src="${item.picture}" alt="${item.headline}" loading="eager" class="img-news" />
         <div class="content">
