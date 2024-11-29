@@ -50,6 +50,7 @@ class PoliticsComponent extends HTMLElement {
                     </div>
                 </div>
             </div>
+            <hr class="line">
         `;
     }
 }

@@ -14,6 +14,12 @@ body{
     overflow-y: overlay;
 }
 
+.line {
+    height:2px;border-width:0;
+    color:rgb(255, 255, 255);
+    background-color:gray
+}
+
 ::-webkit-scrollbar{
     width: 8px;
 }

@@ -48,6 +48,7 @@ class TechComponent extends HTMLElement {
                     `).join('')}
                 </div>
             </div>
+            <hr class="line">
         `;
 
         this.innerHTML = `

@@ -50,6 +50,7 @@ class BusinessComponent extends HTMLElement {
                     </div>
                 </div>
             </div>
+            <hr class="line">
         `;
     }
 }

@@ -48,6 +48,7 @@ class SportComponent extends HTMLElement {
                     `).join('')}
                 </div>
             </div>
+            <hr class="line">
         `;
 
         this.innerHTML = `
