@@ -28,7 +28,7 @@ class TechComponent extends HTMLElement {
 
         const technologyNewsSection = `
             <div class="title" id="technology" >
-                <h2 class="news-title" style="text-decoration: underline; color: white; margin-left: 30px; margin-bottom: 20px; font-size: 50px;">Technology</h2>
+                <h2 class="news-title">Technology</h2>
             </div>
             <div class="newsBox"> 
                 <div class="content-wrapper">

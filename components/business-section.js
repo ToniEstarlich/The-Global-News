@@ -29,7 +29,7 @@ class BusinessComponent extends HTMLElement {
         this.innerHTML = `
             <div class="news" id="business">
                 <div class="title">
-                    <h2 class="news-title" style="text-decoration: underline; color: white; margin-left: 86px; margin-bottom: 20px; font-size: 50px;">Business</h2>
+                    <h2 class="news-title">Business</h2>
                 </div>
                 <div class="newsBox"> 
                     <div class="content-wrapper">
