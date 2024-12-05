@@ -154,22 +154,22 @@
 
 @media (max-width: 450px) {
   .news-title {
-    margin-top: 35%;
-    margin-right: 30%;
+    font-size: 30px;
+    margin-left: 4%;
   }
 }
 
 @media (max-width: 360px) {
   .news-title {
     font-size: 30px;
-    margin-left: -50%;
+    margin-left: 4%;
   }
 }
 
 @media (max-width: 412px) {
   .news-title {
     font-size: 30px;
-    margin-left: -50%;
+    margin-left: 4%;
   }
 }
 
