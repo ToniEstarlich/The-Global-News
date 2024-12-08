@@ -1,5 +1,5 @@
+/*this the css for the components sports,business,politics,tecnology-sections*/
 .news {
-  
   margin-top: -10%;
 }
 .news-title {
@@ -136,6 +136,10 @@
 .news-card__read-more:hover i {
   left: 0.5rem;
   color: yellow;
+}
+
+#politics {
+  margin-top: 5px;
 }
 
 /*responsive*/
