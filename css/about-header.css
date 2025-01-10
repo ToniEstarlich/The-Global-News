@@ -40,6 +40,15 @@
 }
 
 /* Responsive adjustments */
+
+@media (max-width: 1180px) {
+    .main-title {
+        font-size: 280%;
+        margin-top: 2%;
+        margin-left: 7%;
+    } 
+}
+
 @media (max-width: 1024px) {
     .main-title {
         margin-top: 3%;
