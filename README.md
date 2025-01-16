@@ -1,5 +1,5 @@
 # Global News
-
+ <img src="./assets/screenshots/responsive-news.jpg" alt="Desktop Screenshot" width="330"><br>
 **Global News** is a fictional digital news platform that promotes independent journalism, free from corporate, political, or financial influence. This project showcases a responsive website that organizes news into various categories (sports, politics, technology, and business) while maintaining an accessible and scalable structure.
 
 ---
@@ -31,14 +31,10 @@ Global News embodies the ideals of journalistic freedom and technology as a mean
 
 ## 🖥️ Screenshots
 
-### 1. **PC Screen**  
-   ![PC Screen Screenshot](./assets/screenshots/pc-screen.jpeg)  
 
-### 2. **iPad Mini**  
-   ![iPad Mini Screenshot](./assets/screenshots/ipad-mini.jpeg)  
-
-### 3. **Smartphone**  
-   ![Smartphone Screenshot](./assets/screenshots/smartphone.png)  
+| Desktop View | Tablet View | Mobile View |
+|--------------|-------------|-------------|
+| <img src="./assets/screenshots/pc-screen.jpeg" alt="Desktop Screenshot" width="330"> | <img src="./assets/screenshots/ipad-mini.jpeg" alt="Tablet Screenshot" width="150"> | <img src="./assets/screenshots/smartphone.png" alt="Mobile Screenshot" width="50"> |
 
 ---
 
@@ -140,4 +136,124 @@ Global News embodies the ideals of journalistic freedom and technology as a mean
 - Screenshots are included with appropriate file paths.
 - The "How to Run the Project" section and repository link are integrated for completeness.
 
-Feel free to copy this directly into your `README.md` file! 😊
+---
+
+## Testing 
+
+# Header Component
+
+## Overview
+<img src="./assets/wireframes_components/header_component.png" alt="Desktop Screenshot" width="330"><br>
+The `headerComponent` is a reusable web component designed for the `Global News` project. It features a dynamic slider displaying key news highlights, complete with navigation controls for a seamless user experience.
+
+---
+
+## Features
+- **News Highlights Slider**: Displays a carousel of news headlines and descriptions.
+- **Navigation Buttons**: Includes "Next" and "Previous" buttons to navigate through the slider.
+- **Custom Web Component**: Built using the `HTMLElement` class for modularity and easy integration.
+- **Responsive Design**: Styled to adapt across various screen sizes.
+
+---
+
+## File Details
+- **Component File**: `./components/header.js`
+- **Stylesheet**: `./css/header.css`
+- **Wireframe Design**: `./assets/wireframes_components/header_component.png`
+
+---
+
+## Usage
+1. **Import the Component**: Add the `header.js` file to your project.
+   ```html
+   <script src="./components/header.js" type="module"></script>
+
+---
+# Header Component
+
+## Add the Custom Element
+
+Use the `<header-component>` tag in your HTML:
+
+```html
+<header-component></header-component>
+```
+
+## Link the Stylesheet
+
+Ensure the associated CSS file is included:
+
+```html
+<link rel="stylesheet" href="./css/header.css">
+```
+
+## Tests
+
+### Location
+
+All tests are located in:
+
+```bash
+/_tests_/headerComponent.test.js
+```
+
+### Test Cases
+
+- **Rendering Slider Items**: Ensures the slider initializes correctly with the provided data.
+- **Validating Content**: Verifies the first slider item displays the correct title and description.
+- **Navigation Buttons**: Confirms the "Next" and "Previous" buttons update the slider's content.
+
+### Test Results
+
+All tests passed successfully, confirming the functionality of the `headerComponent`.
+
+#### Test Output:
+
+```bash
+> npm test
+
+PASS  _tests_/headerComponent.test.js
+  headerComponent
+    √ should render slider items correctly
+    √ should render the correct content in the first item
+    √ should move items on "next" button click
+    √ should move items on "prev" button click
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        1.166 s
+Ran all test suites.
+```
+
+## Troubleshooting
+
+### Issue: `NotSupportedError: This name has already been registered in the registry`
+
+- **Cause**: The custom element was being redefined.
+- **Solution**: Added a check before defining the custom element:
+
+```javascript
+if (!customElements.get('header-component')) {
+  customElements.define('header-component', headerComponent);
+}
+```
+
+### Issue: `HTMLElement is not defined`
+
+- **Cause**: Jest lacks a browser environment.
+- **Solution**: Install `jest-environment-jsdom`:
+
+```bash
+npm install jest-environment-jsdom
+```
+
+Update the Jest configuration in `package.json`:
+
+```json
+"jest": {
+  "testEnvironment": "jsdom"
+}
+```
+---
+

@@ -1,0 +1,16 @@
+{
+  "name": "the-global-news",
+  "version": "1.0.0",
+  "description": "News Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Antonio Estarlich",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jsdom": "^26.0.0"
+  }
+}
