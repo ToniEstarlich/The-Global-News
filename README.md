@@ -1,5 +1,5 @@
 # The Global News
- <img src="./assets/screenshots/responsive-news.jpg" alt="Desktop Screenshot" width="330"><br>
+ <img src="./assets/screenshots/responsive-news.jpg" alt="Desktop Screenshot" width="630"><br>
 **The Global News** is a fictional digital news platform that promotes independent journalism, free from corporate, political, or financial influence. This project showcases a responsive website that organizes news into various categories (sports, politics, technology, and business) while maintaining an accessible and scalable structure.
 
 ---
