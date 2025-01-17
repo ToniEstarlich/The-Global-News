@@ -1,6 +1,6 @@
-# Global News
+# The Global News
  <img src="./assets/screenshots/responsive-news.jpg" alt="Desktop Screenshot" width="330"><br>
-**Global News** is a fictional digital news platform that promotes independent journalism, free from corporate, political, or financial influence. This project showcases a responsive website that organizes news into various categories (sports, politics, technology, and business) while maintaining an accessible and scalable structure.
+**The Global News** is a fictional digital news platform that promotes independent journalism, free from corporate, political, or financial influence. This project showcases a responsive website that organizes news into various categories (sports, politics, technology, and business) while maintaining an accessible and scalable structure.
 
 ---
 
@@ -138,8 +138,152 @@ Global News embodies the ideals of journalistic freedom and technology as a mean
 
 ---
 
-## Testing 
+# Testing Components
+---
+# About Header Component
 
+## Overview
+<img src="./assets/wireframes_components/about_header_component.png" alt="Desktop Screenshot" width="330"><br>
+The `aboutHeaderComponent` is a reusable web component designed for the `Global News` project. It provides a clean and responsive header for the about section of the site.
+
+---
+### Location
+
+All tests are located in:
+
+```bash
+/_tests_/about-header.test.js
+```
+---
+
+## Features
+- **About Section Header**: Displays the title and description for the about page.
+- **Responsive Design**: Ensures proper layout and design across different screen sizes.
+- **Custom Web Component**: Built using the `HTMLElement` class for modularity and easy integration.
+
+---
+
+## File Details
+- **Component File**: `./components/About-components/about-header.js`
+- **Stylesheet**: `./css/about-header.css`
+- **Wireframe Design**: `./assets/wireframes_components/about_header_component.png`
+
+---
+
+## Usage
+
+### 1. Import the Component
+
+Add the `about-header.js` file to your project:
+
+```html
+<script src="./components/About-components/about-header.js" type="module"></script>
+```
+### 2. Add the Custom Element
+
+Use the `<about-header>` tag in your HTML:
+
+```html
+<about-header></about-header>
+```
+
+### 3. Link the Stylesheet
+
+Ensure the associated CSS file is included:
+
+```html
+<link rel="stylesheet" href="./css/about-header.css">
+```
+## Test Cases
+
+- **Rendering Header**: Ensures the about header component renders correctly with the proper title and description.
+- **Responsive Layout**: Verifies that the header adjusts properly on different screen sizes.
+
+---
+
+## Test Results
+
+All tests passed successfully, confirming the functionality of the `aboutHeaderComponent`.
+
+---
+
+## Test Output:
+
+```bash
+> npm test
+
+PASS  _tests_/headerComponent.test.js
+PASS  _tests_/about-header.test.js
+
+Test Suites: 2 passed, 2 total
+Tests:       7 passed, 7 total
+Snapshots:   0 total
+Time:        1.671 s
+Ran all test suites.
+```
+---
+## Troubleshooting
+### Issue: `SyntaxError: Cannot use import statement outside a module`
+
+- **Cause**: Jest encountered an import statement but wasn't configured for ES Modules.
+- **Solution**: Ensure Babel is configured to transform your code:
+
+```bash
+npm install --save-dev babel-jest @babel/core @babel/preset-env
+```
+---
+### Issue: `Jest encountered an unexpected token`
+
+- **Cause**: Jest needs to be configured to support ES Modules or JSX.
+- **Solution**: In your `package.json`, make sure the following configuration is added for Jest:
+
+```json
+"jest": {
+  "testEnvironment": "jsdom"
+}
+```
+---
+## Why Integrate Babel and Node Modules?
+
+After running tests for the `about-header.js` component, you might encounter issues related to Jest not properly handling ES modules or JSX syntax. This is where Babel and the necessary node modules come into play. Here's why and how to integrate them:
+
+### 1. **Why Use Babel?**
+   Babel is a tool that allows you to use the latest JavaScript features (like ES6 modules or JSX) in your code while ensuring compatibility with older JavaScript environments. Jest, by default, may not understand the newer syntax unless you explicitly tell it to use Babel for transpiling. 
+
+### 2. **Why Configure Jest?**
+   Jest runs tests in a Node.js environment, which is different from a browser. If you're using ES modules or JSX, Jest won't be able to parse them without the right configuration. This is why we need to set up Babel to transpile the code before Jest can run the tests properly.
+
+### 3. **Steps to Integrate Babel and Node Modules**
+
+   - **Install Babel and Related Dependencies**:
+     Babel can be integrated into your project using the following npm packages: `babel-jest`, `@babel/core`, and `@babel/preset-env`. These packages allow Jest to understand modern JavaScript syntax.
+
+     To install Babel, run the following command in your project directory:
+
+     ```bash
+     npm install --save-dev babel-jest @babel/core @babel/preset-env
+     ```
+
+   - **Configure Jest to Use Babel**:
+     After installing Babel, you need to tell Jest to use it by adding the `transform` configuration to your `package.json`. This ensures that Jest uses Babel to transpile `.js` files during testing.
+
+     In your `package.json`, add the following Jest configuration:
+
+     ```json
+     "jest": {
+       "transform": {
+         "^.+\\.js$": "babel-jest"
+       }
+     }
+     ```
+
+     This configuration ensures that all `.js` files in your project will be processed by `babel-jest` before Jest runs the tests.
+
+### 4. **Benefit**
+   By integrating Babel and configuring Jest in this way, you'll be able to use modern JavaScript features like ES modules and JSX, while also ensuring that your tests run smoothly without any syntax errors.
+
+
+---
 # Header Component
 
 ## Overview
@@ -256,4 +400,5 @@ Update the Jest configuration in `package.json`:
 }
 ```
 ---
+
 
