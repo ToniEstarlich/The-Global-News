@@ -1,5 +1,5 @@
 # The Global News
- <img src="./assets/screenshots/responsive-news.jpg" alt="Desktop Screenshot" width="330"><br>
+ <img src="./assets/screenshots/responsive-news.jpg" alt="Desktop Screenshot" width="630"><br>
 **The Global News** is a fictional digital news platform that promotes independent journalism, free from corporate, political, or financial influence. This project showcases a responsive website that organizes news into various categories (sports, politics, technology, and business) while maintaining an accessible and scalable structure.
 
 ---
@@ -282,6 +282,55 @@ After running tests for the `about-header.js` component, you might encounter iss
 ### 4. **Benefit**
    By integrating Babel and configuring Jest in this way, you'll be able to use modern JavaScript features like ES modules and JSX, while also ensuring that your tests run smoothly without any syntax errors.
 
+
+---
+## Testing Documentation
+
+### Overview
+<img src="./assets/wireframes_components/navbar_component.png" alt="Desktop Screenshot" width="330"><br>
+To ensure the stability and reliability of the components in **The Global News** project, a series of unit tests were implemented using **Jest** and the `@testing-library/jest-dom` package. These tests validate the functionality and correct rendering of the components, focusing on dynamic behaviour and routing.
+
+### Tests Implemented
+
+#### 1. Navbar Component
+**File:** `_tests_/navbar.test.js`
+
+- **Purpose:** Verify the correct behaviour and rendering of the `navbar-component` under different scenarios.
+- **Key Tests:**
+  - **Rendering Validation:** Ensures the navbar is correctly rendered in the DOM with the appropriate CSS classes.
+  - **Dynamic Links:** Confirms that navigation links (`Home`, `About`, `Contact`) have the correct paths based on the current page:
+    - **Home Page:** Links are relative to `index.html`.
+    - **Subpages (e.g., Sports News):** Links adjust to use relative paths (`../../`).
+  - **Social Component:** Verifies that the `social-component` is correctly included in the navbar.
+
+#### 2. Header Component
+**File:** `_tests_/headerComponent.test.js`
+
+- **Purpose:** Test the correct rendering and functionality of the `headerComponent`.
+
+#### 3. About Header Component
+**File:** `_tests_/about-header.test.js`
+
+- **Purpose:** Verify the rendering and layout of the header on the About page.
+
+### How to Run the Tests
+To execute the test suite, use the following command in your terminal:
+
+```bash
+npm test
+```
+## Test Results
+
+The current test suite includes a total of **11 tests** across **3 test files**, all of which pass successfully:
+
+```yaml
+Test Suites: 3 passed, 3 total
+Tests:       11 passed, 11 total
+Snapshots:   0 total
+Time:        ~1.8 seconds
+```
+### Deprecation Warning
+A warning related to the deprecated `punycode` module may appear during testing. This does not affect the functionality of the tests or the project. If necessary, you can suppress the warning by updating related dependencies in the future.
 
 ---
 # Header Component
