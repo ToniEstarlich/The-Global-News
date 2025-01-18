@@ -665,5 +665,115 @@ Update the Jest configuration in `package.json`:
 }
 ```
 ---
+# News Section Components (Business, Sports, Politics, Technology)
+
+## Overview
+
+<img src="./assets/wireframes_components/news_section_component.png" alt="Desktop Screenshot" width="330"><br>
+The four main components—**Technology Section**, **Sport Section**, **Business Section**, and **Politics Section**—share a common **CSS style** file, `cards.css`, to ensure consistent and cohesive styling across the website's sections.
+
+Each of these components represents a different category of news, which is displayed in a structured format, typically using cards or list items. By sharing the same stylesheet, all four sections maintain a unified design, with consistent spacing, layout, typography, and visual appearance. This approach ensures that the user experience is seamless, regardless of which section they are viewing.
+
+These sections are crucial for the homepage of the website, acting as the primary content areas where users can explore the latest updates in different fields:
+- **Technology**: Displays news related to the tech industry, including trends, innovations, and breakthroughs.
+- **Sport**: Features the latest sports news, including scores, highlights, and articles.
+- **Business**: Showcases global economic news, stock market updates, and business trends.
+- **Politics**: Offers coverage on political events and developments from around the world.
+
+The shared `cards.css` style file ensures that these sections are visually aligned, providing a cohesive look and feel across the homepage.
+
+---
+### Component Testing Summary
+
+#### 1. Technology Section Component (`technology-section.js`)
+- **Purpose**: Displays news articles related to technology, typically featuring cards or list items for easy browsing.
+- **Test Results**: 
+  - The tests for the Technology Section component were **successful**. 
+  - It correctly renders the content, and the component behaves as expected, displaying the latest tech news.
+  - **No issues** were found in its functionality, confirming that the section’s layout and data rendering are correct.
+
+#### 2. Sport Section Component (`sport-section.js`)
+- **Purpose**: Displays sport-related news and articles, likely in a similar card-based or list format.
+- **Test Results**:
+  - All tests for the Sport Section passed successfully.
+  - The component renders and displays sport news correctly, providing a seamless user experience.
+  - **No bugs** were identified during testing, ensuring the section works properly for users to view sports updates.
+
+#### 3. Business Section Component (`business-section.js`)
+- **Purpose**: Showcases business-related news, displaying articles relevant to global economic and business trends.
+- **Test Results**:
+  - The tests for the Business Section component were **all successful**.
+  - It correctly fetches and displays business news, with all layout and functionality in place.
+  - No errors were found, confirming that this section operates as expected.
+
+#### 4. Politics Section Component (`politics-section.js`)
+- **Purpose**: Displays news related to politics, offering a collection of articles covering global political events.
+- **Test Results**:
+  - The Politics Section component’s tests were **successful**, with no issues during the test runs.
+  - The section displays political news accurately and responds to interactions appropriately, ensuring smooth functionality.
+  - There were **no failures**, and the component works as intended.
+
+---
+
+### Summary of Test Results
+- All four components (Technology, Sport, Business, and Politics sections) passed their respective tests, ensuring that they render and function correctly.
+- **Test Outcome**: All 4 components showed successful test results, indicating no bugs or layout issues in terms of rendering news and interacting with the data.
+
+---
+## Understanding it() vs test() in Jest
+When writing tests in Jest, you may notice two functions used to define test cases: it() and test(). Both serve the same purpose and are functionally equivalent—they define a single test case. However, there are subtle stylistic differences that may guide your choice.
+### Why Use `it()`?
+- `it()` is often used in Behaviour-Driven Development (BDD) practices.
+
+- It allows you to write test cases in a more natural language-like style, describing the behaviour of the component or functionality being tested.
+
+- Example:
+```javascript
+it('should render the business news cards', () => {
+    // Test logic
+});
+```
+This reads as a sentence: "It should render the business news cards."
+
+### Why Use `test()`?
+ - `test()` is more generic and often used when the test does not need to follow a natural language description.
+
+ - It works just as well as `it()` and is slightly shorter to type.
+
+ - Example:
+
+ ```javascript
+ test('renders the business news cards', () => {
+    // Test logic
+});
+ ```
+ ### We can Mix `it()` and `test()`?
+ Yes! Jest allows you to mix them, but for consistency, it’s recommended to standardise on one style across your test suite.
+### When to Use Which? 
+
+- ***Follow Project or Team Conventions:*** If your team prefers `it()` for behaviour-focused descriptions, use that. If no preference exists, stick to `test()` for simplicity.
+
+- ***Natural Descriptions:***Use `it()` if you want test cases that read more like sentences, especially in BDD-oriented projects.
+
+- ***Consistency is Key*** Choose one style and apply it consistently to make your tests easier to read and maintain.
+
+### Example of Both in Action
+```javascript
+// Using 'it' for natural language descriptions
+it('should render the correct number of business news cards', () => {
+    // Test logic
+});
+
+// Using 'test' for a generic test case
+test('renders the business news section', () => {
+    // Test logic
+});
+```
+Both work the same way. The choice depends on personal or team preferences.
+---
+
+
+
+
 
 

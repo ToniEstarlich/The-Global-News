@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 import '@testing-library/jest-dom';
-import '../components/dropdown.js'; // Import the dropdown component
+import '../components/dropdown.js'; 
 
 describe('DropdownComponent', () => {
   let dropdown;

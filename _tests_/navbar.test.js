@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 import '@testing-library/jest-dom';
-import '../components/navbar.js'; // Import the navbar component
+import '../components/navbar.js'; 
 
 describe('NavbarComponent', () => {
   let navbar;
