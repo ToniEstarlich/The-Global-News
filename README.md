@@ -469,6 +469,7 @@ Validation Error:
  Module <rootDir>/setupTests.js in the setupFilesAfterEnv option was not found.
  ```
 This occurs because Jest is looking for a setupTests.js file to configure the testing environment, such as adding custom matchers from @testing-library/jest-dom. Without this file, Jest will not know how to properly set up the environment for testing.
+
 ---
 ## Solution: Adding setupTests.js
 Create the setupTests.js File:
