@@ -138,6 +138,45 @@ Global News embodies the ideals of journalistic freedom and technology as a mean
 
 ---
 
+# Problem and resolution
+---
+### Problem: Unable to Push Changes Due to Remote Conflicts
+
+While attempting to push changes to the remote repository, the following error occurred:
+
+### Resolution
+
+The issue occurred because there were changes on the remote repository that were not present locally. To resolve this:
+
+1. **Pulled the latest changes** from the remote repository to synchronize the local branch with the remote one:
+
+   ```bash
+   git pull origin master
+   ```
+### Resolved Merge Conflicts
+
+During the pull process, merge conflicts appeared. After editing the conflicted files, they were staged and committed with the following commands:
+
+```bash
+git add .
+git commit -m "Resolved merge conflicts"
+```
+### Pushed Changes to Remote Repository
+
+After resolving the merge conflicts and committing the changes, the updates were pushed back to the remote repository with the following command:
+
+```bash
+git push origin master
+```
+### Synchronization of Local and Remote Repositories
+
+This process ensured that both the local and remote repositories were synchronized, resolving the issue and allowing for a successful push.
+
+  
+
+
+---
+
 # Testing Components
 ---
 # About Header Component
@@ -284,7 +323,8 @@ After running tests for the `about-header.js` component, you might encounter iss
 
 
 ---
-## Testing Documentation
+# Navbar Component
+---
 
 ### Overview
 <img src="./assets/wireframes_components/navbar_component.png" alt="Desktop Screenshot" width="330"><br>
@@ -333,7 +373,182 @@ Time:        ~1.8 seconds
 A warning related to the deprecated `punycode` module may appear during testing. This does not affect the functionality of the tests or the project. If necessary, you can suppress the warning by updating related dependencies in the future.
 
 ---
+# DropDown Component
+---
+### Overview
+<img src="./assets/wireframes_components/dropdown_component.png" alt="Dropdown Component Screenshot" width="130"><br>
+To ensure the stability and reliability of the **Dropdown Component** in **The Global News** project, a series of unit tests were implemented using **Jest** and the `@testing-library/jest-dom` package. These tests validate the functionality and correct rendering of the dropdown component, focusing on interaction behaviour and rendering the list of categories (e.g., Sports, Business, Technology, Politics).
+
+### Tests Implemented
+
+#### 1. Dropdown Component
+**File:** `_tests_/dropdown.test.js`
+
+- **Purpose:** Verify the correct behaviour and rendering of the `dropdown-component` under different scenarios.
+- **Key Tests:**
+  - **Rendering Validation:** Ensures the dropdown is correctly rendered in the DOM with the appropriate CSS classes and structure.
+  - **Dropdown Items:** Confirms that the dropdown correctly includes the four categories (`Sport`, `Business`, `Technology`, `Politics`) and links to their respective sections on the page.
+
+### How to Run the Tests
+To execute the test suite, use the following command in your terminal:
+
+```bash
+npm test
+```
+### Test Results
+The current test suite includes a total of **14 tests** across **4 test files**, all of which pass successfully:
+
+```yaml
+Test Suites: 4 passed, 4 total
+Tests:       14 passed, 14 total
+Snapshots:   0 total
+Time:        ~1.9 seconds
+```
+---
+# Social Buttons Components
+---
+### Overview
+<img src="./assets/wireframes_components/social_buttoms_component.png" alt="Social Buttons Component Screenshot" width="130"><br>
+To ensure the stability and reliability of the **Social Buttons Component** in **The Global News** project, a series of unit tests were implemented using **Jest** and the `@testing-library/jest-dom` package. These tests validate the functionality and correct rendering of the social buttons, focusing on the interaction behaviour and correct URLs for Facebook, Twitter, LinkedIn, and YouTube.
+
+### Tests Implemented
+
+#### 1. Social Buttons Component
+**File:** `_tests_/social-buttoms.test.js`
+
+- **Purpose:** Verify the correct behaviour and rendering of the `social-buttoms-component` under different scenarios.
+- **Key Tests:**
+  - **Rendering Validation:** Ensures the social buttons are correctly rendered in the DOM with the appropriate CSS classes and structure.
+  - **Link Validation:** Confirms that each social button correctly links to the associated social media profiles:
+    - Facebook: `https://www.facebook.com/yourprofile/`
+    - Twitter: `https://twitter.com/yourprofile`
+    - LinkedIn: `https://www.linkedin.com/in/yourprofile`
+    - YouTube: `https://www.youtube.com/c/yourchannel`
+
+### How to Run the Tests
+To execute the test suite, use the following command in your terminal:
+
+```bash
+npm test
+```
+### Test Results
+The current test suite includes a total of **5 tests** across **1 test file**, all of which pass successfully:
+
+```yaml
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        ~1.8 seconds
+```
+---
+# Footer Component
+---
+## Overview
+<img src="./assets/wireframes_components/footer_component.png" alt="Desktop Screenshot" width="330"><br>
+## Footer Component Design
+The footer component of the project is a crucial part of the website's layout, providing essential information and links in a clean and user-friendly manner. Here's a breakdown of its design:
+
+## Purpose:
+The footer is designed to provide additional site navigation, social media links, and legal information (such as copyright details) in a simple, compact format.
+
+## Responsiveness:
+The design ensures that the footer adapts to different screen sizes, maintaining accessibility and functionality on both desktop and mobile devices.
+
+## Structure:
+It consists of multiple sections:
+
+## Contact Information:
+ Provides details like the company address, email, and phone number.
+Social Media Links: Displays icons that link to the project's social media accounts.
+Legal Information: Includes copyright information and links to privacy policies or terms of service.
+
+While running npm test in the project, you may encounter the following error message:
+
+```bash
+Validation Error:
+ Module <rootDir>/setupTests.js in the setupFilesAfterEnv option was not found.
+ ```
+This occurs because Jest is looking for a setupTests.js file to configure the testing environment, such as adding custom matchers from @testing-library/jest-dom. Without this file, Jest will not know how to properly set up the environment for testing.
+---
+## Solution: Adding setupTests.js
+Create the setupTests.js File:
+Add a new file called setupTests.js in the root directory of your project, next to package.json.
+
+## Add Jest DOM Import:
+Import @testing-library/jest-dom into the setupTests.js file:
+
+```javascript
+
+import '@testing-library/jest-dom';
+Update Jest Configuration:
+```
+In your package.json, add a setupFilesAfterEnv key to the Jest configuration. This will tell Jest where to look for the setup file.
+
+## Example:
+
+```json
+
+"jest": {
+  "testEnvironment": "jsdom",
+  "transform": {
+    "^.+\\.js$": "babel-jest"
+  },
+  "setupFilesAfterEnv": ["<rootDir>/setupTests.js"]
+}
+```
+## Run Tests Again:
+Once the setup is complete, running npm test will ensure that Jest sets up the environment correctly for testing.
+
+---
+## File Details
+- **Component File**: `./components/footer.js`
+- **Stylesheet**: `./css/footer.css`
+- **Wireframe Design**: `./assets/wireframes_components/footer_component.png`
+---
+## Test Results After Fix
+After making the necessary changes to the Jest setup, running npm test will ensure that the environment is correctly set up for testing, including for the footer component. This will also confirm the functionality and design integrity of the footer.
+
+```bash
+> npm test
+
+> the-global-news@1.0.0 test
+> jest
+
+(node:14744) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+ PASS  _tests_/footer.test.js
+ PASS  _tests_/navbar.test.js
+ PASS  _tests_/dropdown.test.js
+ PASS  _tests_/headerComponent.test.js
+ PASS  _tests_/about-header.test.js
+ PASS  _tests_/social-buttoms.test.js
+
+Test Suites: 6 passed, 6 total
+Tests:       20 passed, 20 total
+Snapshots:   0 total
+Time:        2.484 s
+Ran all test suites.
+```
+---
+## Troubleshooting
+- **Issue**: SyntaxError: Cannot use import statement outside a module
+- **Cause**: Jest encountered an import statement but wasn't configured for ES Modules.
+- **Solution**: Ensure Babel is configured to transform your code:
+```bash
+npm install --save-dev babel-jest @babel/core @babel/preset-env
+```
+---
+-**Issue**: Jest encountered an unexpected token
+-**Cause**: Jest needs to be configured to support ES Modules or JSX.
+-**Solution**: In your package.json, make sure the following configuration is added for Jest:
+```json
+"jest": {
+  "testEnvironment": "jsdom"
+}
+```
+---
 # Header Component
+---
 
 ## Overview
 <img src="./assets/wireframes_components/header_component.png" alt="Desktop Screenshot" width="330"><br>
