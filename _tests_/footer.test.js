@@ -1,4 +1,5 @@
 // Import the FooterComponent module
+import '@testing-library/jest-dom';
 import '../components/footer.js';  
 
 describe('FooterComponent', () => {
