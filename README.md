@@ -966,6 +966,79 @@ The `MixCardsComponent` is designed to display a collection of news cards, each 
 
 ---
 
+### DateComponent
+
+The `DateComponent` is a custom web component that formats and displays dates for news articles. If no `date` attribute is provided, it defaults to the current date, ensuring all articles appear recent. Dates are formatted to the UK locale (`en-GB`) for a consistent and professional presentation.
+
+#### Key Features
+- Automatically formats and displays dates passed through the `date` attribute.
+- Defaults to the current date if the `date` attribute is missing.
+- Displays dates in the UK format (`DD Month YYYY`).
+- Lightweight component, adding a clean and polished aesthetic to news articles.
+
+#### Example Usage
+```html
+<date-component date="2025-01-24"></date-component>
+```
+#### Test Results
+
+- **Test Suite**: 17 tests passed out of 17.
+- **Total Tests**: 74 tests passed out of 74.
+- **Snapshots**: 0 total.
+- **Test Duration**: 5.856 seconds.
+
+#### Key Features Tested
+- Correct rendering of the default date when no `date` attribute is provided.
+- Proper formatting of a provided `date` attribute in the UK locale.
+- Graceful handling of invalid or malformed date strings.
+- Accurate structure of the DOM elements (`<div>` containing a `<p>` element).
+
+#### Status
+- **Experimental**: This component is primarily used for aesthetic purposes in the project.
+
+---
+# Contact Form Component
+
+### Overview
+<img src="./assets/wireframes_components/contact_form_component.png" alt="Desktop Screenshot" width="330"><br>
+The **Contact Form** component is designed to allow users to easily get in touch with the business. It is a simple yet functional form that collects user information such as name, email, phone, and message. Upon form submission, the user is redirected to a success page.
+
+### Key Features
+- Displays **contact information** (address, email, phone, business hours).
+- Provides a **contact form** for users to submit their inquiries.
+- Handles **form validation** to ensure required fields are filled.
+- **Redirection** to a success page after form submission.
+  
+### Contact Information Displayed:
+- **Address**: The company's address is prominently displayed with street, city, postal code, and country.
+- **Email**: The email address for inquiries.
+- **Phone**: A contact number for support.
+- **Business Hours**: Operating hours for weekdays, Saturday, and Sunday.
+
+### Location Description
+The contact section includes a description of the business's location, situated in the heart of London on Fleet Street, an area historically known for its role in journalism.
+
+### Form Fields
+- **Name**: The user's full name.
+- **Email**: The user's email address (required).
+- **Phone**: An optional phone number.
+- **Message**: A text area for users to write their inquiry (required).
+
+### Redirection
+After a successful form submission, users are redirected to a success page located at `../pages/success/send-contact.html`.
+
+### Design
+The **contact form** and **contact information** are styled using the custom CSS located in `css/contact-form.css`. The design is clean and simple, ensuring that users can easily navigate and submit their inquiries.
+
+### How It Works:
+1. The contact form is rendered dynamically when the page loads.
+2. On form submission, the `preventDefault()` method is used to stop the default form submission.
+3. The user is then redirected to the success page (`../pages/success/send-contact.html`).
+
+### Usage
+The contact form is automatically rendered when the component is loaded, and it can be styled and modified further by editing the `contact-form.css` file for more customization.
+
+
 
 
 
