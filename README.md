@@ -941,6 +941,30 @@ Responsiveness: Ensure the application is fully responsive on various devices.
 Accessibility: Improve accessibility features like ARIA roles and keyboard navigation.
 
 ---
+# Cards compononent
+## Component: `MixCardsComponent`
+<img src="./assets/wireframes_components/mix_cards_component.png" alt="Desktop Screenshot" width="100"><br>
+**Description:**  
+The `MixCardsComponent` is designed to display a collection of news cards, each linking to a specific news article. These cards are rendered dynamically from a JSON object, displaying the headline, subtitle, and image for each piece of news. The component also includes horizontal navigation for seamless browsing through different news articles.
+
+---
+
+### Test Results:
+- **Test Suite**: 16 tests passed out of 16.
+- **Total Tests**: 69 tests passed out of 69.
+- **Snapshots**: 0 total.
+- **Test Duration**: 5.196 seconds.
+
+---
+
+### Key Features Tested:
+- Rendering all news cards dynamically from the JSON object.
+- Ensuring correct headlines, subtitles, and image sources for each news card.
+- Validating that the "Read More" links point to the appropriate news pages.
+- Confirming the presence of `<date-component>` in each card.
+- Testing the responsiveness and correctness of horizontal navigation through the news cards.
+
+---
 
 
 
