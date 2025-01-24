@@ -1,43 +1,14 @@
-class BusinessComponent extends HTMLElement {
-    constructor() {
-        super();
-        this.newsIndex = 0;  // Default news index is set to 0
-    }
+// Import any necessary polyfills for web components
+//import "@webcomponents/webcomponentsjs/webcomponents-bundle";
+import "../components/news-components/business-news.js";
 
-    // Lifecycle method that runs when the component is added to the DOM
-    connectedCallback() {
-        
-        // Retrieve the news index from the 'news-index' attribute
-        this.newsIndex = parseInt(this.getAttribute('news-index')) || 0;
+describe('BusinessComponent', () => {
+  let businessNews;
 
-        // Generate HTML content based on the specific business news article data
-        this.innerHTML = `
-        <main style="margin-top: 5%">
-            <h1 class="title-news" style="font-size: 50px;">${businessNews[this.newsIndex].headline}</h1> <!-- Main title -->
-            <figure class="image-div">
-                <img src="${businessNews[this.newsIndex].picture}" alt="${businessNews[this.newsIndex].epigraph}"> <!-- Image -->
-            </figure>
-            <figcaption class="img-caption">${businessNews[this.newsIndex].epigraph}</figcaption> <!-- Image caption -->
-            <section class="news-body">
-                <p>${businessNews[this.newsIndex].lead}</p> <!-- Introduction paragraph -->
-                <p>${businessNews[this.newsIndex].body}... <!-- Add more here later --> </p>
-            </section>
-            <section class="about-writer">
-                <h2>About the Writer</h2>
-                <p>${businessNews[this.newsIndex].writer}</p> <!-- Writer's name -->
-                <p>${businessNews[this.newsIndex].aboutWriter}</p> <!-- Information about the writer -->
-            </section>
-            <section class="source-info">
-                <h2>Source</h2>
-                <p>${businessNews[this.newsIndex].source}<date-component></date-component></p> <!-- Source information -->
-            </section>
-        </main>
-        `;
-    }
-}
-
-// Data array for business news articles
-const businessNews = [
+  beforeEach(() => {
+      
+// Mock the businessNews data
+  businessNews = [
     {
         "epigraph": "EU businesses face new regulations",
         "headline": "The European Union's Green Deal: A Game-Changer for Business",
@@ -71,8 +42,77 @@ const businessNews = [
       "picture": "../../assets/images/business3.jpg"
     }
 ];
+   // Assign the mock data to the global window object for the custom component
+   global.businessNews = businessNews;
+  });
 
-if (!customElements.get('business-component')) {
-// Define the custom element
-customElements.define('business-component', BusinessComponent);
-}
+//------------------------------------------------------------------
+
+
+
+  it('should render the correct news article based on the news-index attribute', () => {
+      document.body.innerHTML = `<business-component news-index="1"></business-component>`;
+      const component = document.querySelector('business-component');
+
+      // Simulate the connectedCallback lifecycle method
+      component.connectedCallback();
+
+      // Verify headline rendering
+      const headline = document.querySelector('.title-news');
+      expect(headline.textContent).toBe(businessNews[1].headline);
+
+      // Verify image rendering
+      const image = document.querySelector('.image-div img');
+      expect(image.src).toContain('http://localhost/assets/images/business2.jpg');
+      expect(image.alt).toBe(businessNews[1].epigraph);
+
+      // Verify writer's information
+      const writer = document.querySelector('.about-writer p:first-of-type');
+      expect(writer.textContent).toBe(businessNews[1].writer);
+  });
+
+  it('should default to index 0 if the news-index attribute is missing or invalid', () => {
+      document.body.innerHTML = `<business-component></business-component>`;
+      const component = document.querySelector('business-component');
+
+      // Simulate the connectedCallback lifecycle method
+      component.connectedCallback();
+
+      // Verify it defaults to the first article
+      const headline = document.querySelector('.title-news');
+      expect(headline.textContent).toBe(businessNews[0].headline);
+  });
+
+  it('should include the source information in the rendered output', () => {
+      document.body.innerHTML = `<business-component news-index="0"></business-component>`;
+      const component = document.querySelector('business-component');
+
+      // Simulate the connectedCallback lifecycle method
+      component.connectedCallback();
+
+      // Verify source information rendering
+      const source = document.querySelector('.source-info p');
+      expect(source.textContent).toContain(businessNews[0].source);
+  });
+
+  it('should render the correct news article based on the news-index attribute', () => {
+      document.body.innerHTML = `<business-component news-index="2"></business-component>`;
+      const component = document.querySelector('business-component');
+
+      // Simulate the connectedCallback lifecycle method
+      component.connectedCallback();
+
+      // Verify headline rendering
+      const headline = document.querySelector('.title-news');
+      expect(headline.textContent).toBe(businessNews[2].headline);
+
+      // Verify image rendering
+      const image = document.querySelector('.image-div img');
+      expect(image.src).toContain('http://localhost/assets/images/business3.jpg');
+      expect(image.alt).toBe(businessNews[2].epigraph);
+
+      // Verify writer's information
+      const writer = document.querySelector('.about-writer p:first-of-type');
+      expect(writer.textContent).toBe(businessNews[2].writer);
+  });
+});

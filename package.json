@@ -29,6 +29,9 @@
     "verbose": true,
     "transform": {
       "^.+\\.jsx?$": "babel-jest"
-    }
+    },
+    "setupFiles": [
+      "<rootDir>/jest.setup.js"
+    ]
   }
 }
