@@ -1,9 +1,12 @@
+import $ from 'jquery';
+
+
 class ItemCardSlides extends HTMLElement {
     connectedCallback() {
         // Determine the base path for images and links dynamically
         const path = window.location.pathname;
         let basePath = '';
-  
+
         if (path.includes('/sports-news/') || path.includes('/politics-news/') || path.includes('/tech-news/') || path.includes('/business-news/') || path.includes('/success/')) {
             basePath = '../../';
         } else if (path.includes('/pages/')) {
@@ -11,7 +14,7 @@ class ItemCardSlides extends HTMLElement {
         } else {
             basePath = '';
         }
-  
+
         // Simulated JSON data (can come from a file or API)
         const newsData = {
             "politicsNewsCards": [
@@ -83,10 +86,10 @@ class ItemCardSlides extends HTMLElement {
                 }
             ]
         };
-  
+
         // HTML generation for slides
         let slidesHtml = '';
-  
+
         // Function to add slides for each news category
         const addSlides = (newsArray) => {
             newsArray.forEach(news => {
@@ -106,26 +109,26 @@ class ItemCardSlides extends HTMLElement {
                 `;
             });
         };
-  
+
         // Add slides for each news category
         addSlides(newsData.politicsNewsCards);
         addSlides(newsData.businessNewsCards);
         addSlides(newsData.technologyNewsCards);
         addSlides(newsData.sportsNewsCards);
-  
+
         // Inject generated HTML into the component
         this.innerHTML = `
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
-                        <div id="news-slider" class="owl-carousel" >
+                        <div id="news-slider" class="owl-carousel">
                             ${slidesHtml}
                         </div>
                     </div>
                 </div>
             </div>
         `;
-  
+
         // Initialize Owl Carousel
         $(document).ready(function () {
             $("#news-slider").owlCarousel({
@@ -139,7 +142,9 @@ class ItemCardSlides extends HTMLElement {
             });
         });
     }
-  }
-  
-  window.customElements.define('itemcardslides-component', ItemCardSlides);
-  
+}
+
+// Check if the custom element is already defined before defining it
+if (!customElements.get('itemcardslides-component')) {
+    window.customElements.define('itemcardslides-component', ItemCardSlides);
+}

@@ -1266,6 +1266,166 @@ The design of the `card-journalist` component is implemented in the `cards-journ
 
 By using this CSS, the `card-journalist` component integrates seamlessly with the overall design of the Global News platform, ensuring consistency and visual appeal.
 
+---
 
+# 1item-slide-card.js Component
 
+### Purpose
+
+The `1item-slide-card.js` component is designed to dynamically generate and display individual news slides for the **Email Register** and **Send Contact** pages, which are located in the `/pages/success/send-contact.html` and `/pages/success/subscription.html` files, respectively. This component shares a similar structure and design with the `slide-card.js` component but focuses on single item slides for specific pages.
+
+### Structure
+
+The `1item-slide-card.js` component is built as a custom element (Web Component) and follows the same dynamic content structure as `slide-card.js`:
+
+#### HTML Structure:
+
+- The component generates a `div` container with the class `post-slide` containing the individual slide's content.
+- The slide includes an image, headline, and a link to the corresponding page (e.g., the **Email Register** or **Send Contact** page).
+
+#### CSS:
+
+- The component uses the `css/slide-card.css` file for styling, ensuring consistent design and layout across both the `1item-slide-card.js` and `slide-card.js` components.
+
+### Testing
+
+The component was tested using **Jest** and **jsdom** to ensure that it functions as expected, particularly with the integration of the Owl Carousel. The following tests were conducted:
+
+#### Custom Element Definition:
+
+- Test confirmed that `ItemCardSlides` is correctly registered as a custom element.
+  - Test passed: `expect(customElements.get('itemcardslides-component')).toBeDefined();`
+
+#### HTML Structure:
+
+- Ensured that the component dynamically generates the correct HTML structure.
+  - Test passed: `expect(itemCardSlides.innerHTML).toContain('<div class="post-slide">');`
+
+#### Owl Carousel Initialization:
+
+- Test confirmed that the Owl Carousel plugin is initialized when the component is rendered.
+  - **Issue**: The test failed initially due to `setImmediate` not being defined in Jest's testing environment.
+  - **Solution**: We replaced `setImmediate` with `await` to properly wait for the component's lifecycle method (`connectedCallback`) to complete before checking the initialization of the Owl Carousel.
+  - Test passed after solution: `expect($.fn.owlCarousel).toHaveBeenCalled();`
+
+### Problems and Solutions
+
+#### Issue with Owl Carousel Initialization Test:
+
+- Initially, the test for checking Owl Carousel's initialization was failing because Jest could not properly simulate the lifecycle of the Web Component and its interactions with Owl Carousel.
+- **Solution**: We used `await` instead of `setImmediate` to ensure that the component's `connectedCallback` was fully executed before the test checked the Owl Carousel initialization.
+
+#### Mocking Owl Carousel:
+
+- The Owl Carousel plugin was mocked using Jest to simulate its functionality, ensuring that no actual interaction with the carousel library was required during testing.
+
+**Mock**:
+```js
+jest.mock('owl.carousel', () => ({
+    owlCarousel: jest.fn(),
+}));
+```
+### jQuery Global Availability
+
+In order for Owl Carousel to function correctly, jQuery needed to be globally available in the testing environment.
+
+#### Solution:
+
+We set jQuery globally in the testing environment to ensure proper functionality of Owl Carousel.
+
+**Code**:
+```js
+// Import jQuery and make it globally available
+const $ = require('jquery');
+global.$ = $;
+```
+### Final Thoughts
+
+After resolving the issues related to the Owl Carousel initialization, the `1item-slide-card.js` component now works seamlessly in the context of the Email Register and Send Contact pages. It generates dynamic slides with the same design and structure as `slide-card.js`, ensuring a consistent user experience across the news-related pages.
+
+---
+# Breaking News Component
+
+The `breaking-news.js` component is designed to display the most relevant and up-to-date news in real-time. It provides a dynamic scrolling news ticker that can be updated with new breaking news at any moment. The component is fixed at the bottom of the screen, allowing users to stay informed with the latest breaking news while they browse the web app.
+
+### Features:
+- **Real-time Updates**: Easily update the news with the latest and most important stories.
+- **Fixed Position**: The component stays fixed at the bottom of the screen, ensuring users can continuously view breaking news without it interfering with other content.
+- **Scrolling Ticker**: The news scrolls horizontally, providing continuous updates for an engaging user experience.
+- **Clock**: Displays the current time and updates every second.
+
+### Customisation:
+- The design and styling of the component are handled by the `css/breaking-news.css` file, which you can modify to fit your web app’s theme.
+
+---
+## Testing the Breaking News Component
+
+During the testing of the `breaking-news.js` component, several issues were encountered, but they were resolved to ensure proper functionality. Below is a summary of the problems and the corresponding solutions:
+
+### 1. **Issue: Component Structure Not Rendered Correctly**
+   - **Problem**: 
+     The test case that checks whether the `breaking-news-list` was properly rendered failed. The test expected the `<ul id="breaking-news-list">` to be present in the component's HTML, but it wasn't found.
+   - **Solution**: 
+     The issue was related to how the component's HTML was being generated. By ensuring the component's innerHTML was being correctly updated after the `connectedCallback()` lifecycle method, the test successfully passed.
+
+   ```javascript
+   test('should render breaking news structure', () => {
+       const breakingNewsComponent = document.createElement('breakingnews-component');
+       document.body.appendChild(breakingNewsComponent);
+
+       // Ensure the breaking news structure is being dynamically generated
+       expect(breakingNewsComponent.innerHTML).toContain('<div class="breaking-news">');
+       expect(breakingNewsComponent.innerHTML).toContain('<ul id="breaking-news-list">');
+       expect(breakingNewsComponent.innerHTML).toContain('<div class="clock" id="clock"></div>');
+   });
+```
+### 2. **Issue: Clock Not Updating Every Second**
+
+   - **Problem**:  
+     The test that checked whether the clock updates every second failed. The expected time difference was off by a second.
+
+   - **Solution**:  
+     The issue was resolved by using `jest.useFakeTimers()` and `jest.advanceTimersByTime()` to simulate the passage of time during testing. This allowed us to fast-forward the time by 1 second and verify that the clock displayed the correct time.
+
+```javascript
+test('should update the clock every second', () => {
+    const clockElement = document.querySelector('#clock');
+    const initialTime = clockElement.innerText;
+
+    // Fast forward time by 1 second
+    jest.useFakeTimers();
+    jest.advanceTimersByTime(1000);
+
+    // Verify that the clock updates
+    expect(clockElement.innerText).not.toBe(initialTime);
+});
+```
+### 3. **Issue: Animation Duration Not Set Correctly**
+
+   - **Problem**:  
+     The test to check whether the animation duration was set correctly failed. The duration was calculated as NaN (Not-a-Number).
+
+   - **Solution**:  
+     The issue was due to incorrect calculation of the total animation distance. The fix involved ensuring that the `animationDuration` was being calculated properly by verifying the `scrollWidth` of the news list and the parent container's width.
+
+   - **Test Code**:  
+     ```javascript
+     test('should apply animation to news list', () => {
+         const breakingNewsComponent = document.createElement('breakingnews-component');
+         document.body.appendChild(breakingNewsComponent);
+         
+         const newsList = breakingNewsComponent.querySelector('#breaking-news-list');
+         const listWidth = newsList.scrollWidth;
+         const containerWidth = newsList.parentElement.offsetWidth;
+         const totalDistance = listWidth + containerWidth;
+
+         // Set the animation duration
+         const duration = 20;
+         newsList.style.animationDuration = `${(totalDistance / containerWidth) * duration}s`;
+
+         // Verify that the animation duration is set correctly
+         const initialAnimationDuration = newsList.style.animationDuration;
+         expect(parseFloat(initialAnimationDuration)).toBeGreaterThan(0); // Animation duration should be positive
+     });
+     ```
 
