@@ -1038,11 +1038,233 @@ The **contact form** and **contact information** are styled using the custom CSS
 ### Usage
 The contact form is automatically rendered when the component is loaded, and it can be styled and modified further by editing the `contact-form.css` file for more customization.
 
+---
 
+# TheOfficeComponent
+## Description:
+<img src="./assets/wireframes_components/the_office_component.png" alt="Desktop Screenshot" width="230"><br>
+The TheOfficeComponent is a custom HTML element that dynamically renders information about The Global News Office, including an image, a detailed biography, and background information about the office's history, mission, and vision. The component serves as part of the About page on the website, providing users with insight into the company's values and operations.
 
+The office's biography includes key sections such as:
+- Introduction to the office
+- The mission and vision of the office
+- A hub of excellence with insights on technology, training, and sustainability
+- A conclusion summarizing the company's role in the media landscape
 
+This component uses the `the-office.css` file for styling and is structured using the following HTML:
 
+- An image of the office.
+- A heading displaying the office's name.
+- A bio section that includes detailed content, including text and headings.
 
+**Example Usage:**
+```html
+<the-office-component></the-office-component>
+```
+## CSS Styling:
+The component is styled using the css/the-office.css file, which includes:
+
+- Responsive design features
+- Text alignment and spacing
+- Image styling
+- Layout adjustments for the bio section
+
+## Testing TheOfficeComponent
+### Test Suite:
+We implemented unit tests for `TheOfficeComponent` to ensure that it renders correctly and displays the expected content. The tests cover the following aspects:
+
+- **Rendering the Office Photo:** Verifying that the office photo is displayed correctly.
+- **Rendering the Office Name:** Checking that the name of the office, "The Global News Office", is rendered properly.
+- **Rendering the Office Bio:** Ensuring that the bio content, including key phrases from the office's introduction, is correctly displayed.
+### Test Results:
+All tests for the TheOfficeComponent passed successfully, confirming that the component is rendered as expected.
+```bash
+PASS  _tests_/the-office.test.js
+  TheOfficeComponent
+    √ should render the office photo correctly (15 ms)
+    √ should render the office name correctly (8 ms)
+    √ should render the office bio correctly (7 ms)
+
+Test Suites: 19 passed, 19 total
+Tests:       79 passed, 79 total
+Snapshots:   0 total
+Time:        4.851 s
+Ran all test suites.
+```
+## Resolved Issues:
+- Initially, the test for checking the bio content was failing due to the mismatch in HTML structure, especially because of extra spaces and newlines.
+- We resolved this issue by adjusting the test to compare only the **text content** (not the exact HTML tags) using `textContent` and normalizing the whitespace. This approach ensures that the test checks for the presence of key phrases rather than the exact HTML structure, making it more robust.
+
+## Conclusion:
+The TheOfficeComponent is fully functional and well-tested. It provides an informative section for the **About** page, introducing **The Global News Office** with a detailed bio and image. The component is now fully integrated with the application, and all tests are passing successfully.
+
+---
+
+# Timeline Component
+
+## Overview
+<img src="./assets/wireframes_components/time_line_component.png" alt="Desktop Screenshot" width="230"><br>
+The Timeline Component is designed for the About page of the website, providing a detailed history of **Global News**, including key events that shaped the company over time. It dynamically renders a series of events on a timeline, starting from its founding in 2003 to the launch of its web app in 2024. The component displays both the year and a brief description of significant events in the company's journey.
+
+## Design
+The design of the timeline is handled in the accompanying CSS file located at `css/time-line.css`. The component's layout is minimalistic, using a clear and straightforward approach to display each event in the timeline with its corresponding year and description.
+
+## Key Features:
+- Displays the history of **Global News** from 2003 to the present.
+- Dynamically generates the timeline based on the `timelineData` object.
+- Clean, structured layout to provide easy readability.
+
+## Timeline Structure:
+The timeline is displayed as an ordered list (`<ul>`) with each event as a list item (`<li>`). Each list item consists of the year and a short description of the event, separated by a hyphen.
+
+## Testing
+
+The Timeline Component has been thoroughly tested to ensure that it correctly renders the timeline and handles various edge cases.
+
+### Tests Included:
+- **Correct Number of Timeline Events**: Ensures that 7 timeline events are correctly rendered.
+- **Correct Event Year and Content**: Validates that each event displays the correct year and associated description.
+- **Order of Events**: Confirms that the events are displayed in the correct chronological order.
+- **Handling Missing Data**: Checks that the component properly handles missing data or attributes.
+
+The testing framework used is **Jest**, and all tests for the Timeline Component have passed successfully.
+
+## Test Output:
+```bash
+Test Suites: 20 passed, 20 total
+Tests: 82 passed, 82 total
+Snapshots: 0 total
+Time: 4.228 s
+```
+## Tests for Timeline Component
+
+- **should render the correct number of timeline events**: Ensures that exactly 7 events are displayed.
+- **should render the correct year and event for each timeline item**: Verifies that the correct year and event description are rendered.
+- **should ensure the timeline items are in the correct order**: Validates that the events are displayed in the proper chronological order.
+- **should handle missing news-index attribute**: Ensures that the component gracefully handles missing data without breaking.
+
+## Problems and Solutions
+
+### Problem 1: Duplication of Timeline Items
+Initially, there was an issue where timeline items were being duplicated when the page was refreshed. This occurred because the `DOMContentLoaded` event was triggering the same code multiple times without clearing the previously generated list items.
+
+**Solution:**
+The solution was to clear the existing items in the `timeline-list` before appending new items. This was achieved by using `timelineList.innerHTML = "";`, ensuring that the list is reset every time the script is executed.
+
+### Problem 2: Incorrect Event Order
+Another issue that was discovered was the timeline events not appearing in the correct chronological order. This was due to missing checks to ensure the data was sorted before rendering.
+
+**Solution:**
+To address this, the timeline data was sorted by the year value to ensure the events were rendered in the correct order, from the earliest to the most recent.
+
+---
+Usage
+- **HTML:** Add an element with the id `timeline-list` where the timeline will be rendered:
+```html
+<ul id="timeline-list"></ul>
+```
+-**CSS:** Ensure that the `css/time-line.cs`s is linked in the `<head>` section of your HTML to apply the styling for the timeline.
+
+-**JavaScript:** Include the `time-line.js` script after the `DOMContentLoaded` event to make sure it runs after the page is fully loaded:
+
+```html
+<script src="../components/About-components/time-line.js"></script>
+```
+- The component will automatically generate and display the timeline of key events on the About page.
+
+---
+
+### Conclusion
+The Timeline Component provides an engaging and dynamic way to present the history of **the Global News** on the About page. With proper handling of edge cases, testing, and a responsive design, the component is a crucial part of showcasing the company's journey and milestones.
+
+---
+# Card Journalist Component - Global News
+
+## Overview
+<img src="./assets/wireframes_components/card_jornalist_component.png" alt="Desktop Screenshot" width="230"><br>
+The `card-journalist` component introduces dynamic and visually appealing cards that showcase journalists working for the Global News Company. Each card displays the journalist's profile picture, name, expertise, and a brief description of their role in delivering news content. This component is fully reusable and encapsulates the logic and styling, making it easy to integrate into any part of the Global News website.
+
+---
+
+## Component Structure
+
+### Code Overview
+The `card-journalist` component is a custom HTML element built using the Web Components API. It dynamically generates journalist cards based on predefined data, ensuring scalability and flexibility.
+
+## Features
+
+- **Dynamic Rendering**: Journalists' cards are generated based on the `journalistCards` data array.
+- **Reusable Web Component**: Encapsulated logic and styling using the Web Components API.
+- **Scalable Design**: Easily extendable to include more journalists or modify existing ones.
+- **Responsive Layout**: The cards are styled to look great across all devices.
+
+---
+
+## Testing
+
+### Testing Framework
+The testing for this component was conducted using **Jest**, a robust JavaScript testing framework.
+
+### Test Implementation
+The testing focused on ensuring:
+
+- The component renders correctly with the provided journalist data.
+- Each card contains the appropriate content, including the journalist's name, expertise, description, and image.
+- The generated HTML structure matches the expected layout.
+
+## Example Test Case 
+```javascript
+test('renders all journalist cards correctly', () => {
+  document.body.innerHTML = '<card-journalist></card-journalist>';
+  const cardJournalistElement = document.querySelector('card-journalist');
+  expect(cardJournalistElement.querySelectorAll('.card').length).toBe(3);
+  expect(cardJournalistElement.innerHTML).toContain('Jane Doe');
+  expect(cardJournalistElement.innerHTML).toContain('Politics');
+});
+```
+## Test Results
+
+All test cases passed successfully, ensuring the component behaves as expected under all tested scenarios.
+
+### Test Results Summary:
+- **Test Suites**: 21 passed, 21 total  
+- **Tests**: 87 passed, 87 total  
+- **Snapshots**: 0 total  
+- **Time**: 5.003 seconds  
+- **Status**: ✅ All tests passed  
+
+---
+
+## Usage Instructions
+
+1. **Import the `card-journalist` component** into your project.
+2. Ensure that the required assets (e.g., images) are available in the specified paths.
+3. Add the component to your HTML as shown below:
+
+```html
+<card-journalist></card-journalist>
+```
+## Conclusion
+
+The `card-journalist` component is a fully tested, reusable, and scalable feature for showcasing journalists within the Global News platform. Its dynamic rendering and responsive design ensure seamless integration into the site, providing users with a polished and professional experience.
+
+The component will automatically render the journalist cards using the predefined data, making it easy to manage and display journalist information dynamically across your platform.
+
+## Design (CSS: `css/cards-journalist.css`)
+
+The design of the `card-journalist` component is implemented in the `cards-journalist.css` file, which provides a visually appealing and responsive layout for displaying journalist information. The CSS is designed to ensure that the cards look great across various devices, adapting to different screen sizes for an optimal viewing experience. Below is a breakdown of the key design features:
+
+### Key Design Features:
+- **Card Layout**: Each journalist's information is presented in a card-like structure, with a cover image, name, specialty, biography, and social media links.
+- **Responsive Design**: The cards are styled to be responsive, ensuring they are properly displayed on devices of all screen sizes (e.g., desktops, tablets, and mobiles).
+- **Styling Details**:
+  - The cover image is styled with a rounded corner and a hover effect to provide interactivity.
+  - Text elements, such as the journalist's name and specialty, are styled to stand out with a clean, modern font.
+  - The biography section is designed for readability, with clear typography and padding.
+  - Social media links are placed at the bottom of each card, styled as icons with hover effects.
+- **Modern and Clean Aesthetic**: The design uses a minimalistic colour scheme and simple, effective layout techniques to provide a professional look suitable for a news platform.
+
+By using this CSS, the `card-journalist` component integrates seamlessly with the overall design of the Global News platform, ensuring consistency and visual appeal.
 
 
 

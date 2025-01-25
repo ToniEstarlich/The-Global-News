@@ -13,9 +13,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const timelineList = document.getElementById("timeline-list");
 
+    // Clear existing timeline items (if any) to prevent duplication
+    timelineList.innerHTML = "";
+
     timelineData.timeline.forEach(item => {
         const listItem = document.createElement("li");
         listItem.innerHTML = `<strong class="year">${item.year}</strong> - ${item.event}`;
         timelineList.appendChild(listItem);
     });
 });
+
