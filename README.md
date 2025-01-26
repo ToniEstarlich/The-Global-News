@@ -433,6 +433,7 @@ These wireframes were designed using **Procreate**, a digital illustration appli
 
 ---
 ## Development Process
+<img src="./assets/wireframes_components/developmen-process.png" alt="Desktop Screenshot" width="630"><br>
 
 The creation of the web app followed a structured and organised process to ensure modularity, reusability, and quality across all components. Below are the steps that were followed:
 
@@ -1587,6 +1588,7 @@ By using this CSS, the `card-journalist` component integrates seamlessly with th
 # 1item-slide-card.js Component
 
 ### Purpose
+<img src="./assets/wireframes_components/1slide-card-wireframe.jpeg" alt="Desktop Screenshot" width="630"><br>
 
 The `1item-slide-card.js` component is designed to dynamically generate and display individual news slides for the **Email Register** and **Send Contact** pages, which are located in the `/pages/success/send-contact.html` and `/pages/success/subscription.html` files, respectively. This component shares a similar structure and design with the `slide-card.js` component but focuses on single item slides for specific pages.
 
@@ -1661,6 +1663,7 @@ After resolving the issues related to the Owl Carousel initialization, the `1ite
 
 ---
 # Breaking News Component
+<img src="./assets/wireframes_components/breaking-news-wireframe.jpeg" alt="Desktop Screenshot" width="630"><br>
 
 The `breaking-news.js` component is designed to display the most relevant and up-to-date news in real-time. It provides a dynamic scrolling news ticker that can be updated with new breaking news at any moment. The component is fixed at the bottom of the screen, allowing users to stay informed with the latest breaking news while they browse the web app.
 
