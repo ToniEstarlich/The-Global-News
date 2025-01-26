@@ -1,6 +1,13 @@
 # The Global News
  <img src="./assets/screenshots/responsive-news.jpg" alt="Desktop Screenshot" width="630"><br>
 **The Global News** is a fictional digital news platform that promotes independent journalism, free from corporate, political, or financial influence. This project showcases a responsive website that organizes news into various categories (sports, politics, technology, and business) while maintaining an accessible and scalable structure.
+### Repository and Live Project  
+
+You can find the source code for **The Global News** in the GitHub repository below:  
+- **Repository**: [Global News GitHub Repository](https://github.com/ToniEstarlich/Global-News)  
+
+The live version of the project is accessible here:  
+- **Live Project**: [The Global News](https://toniestarlich.github.io/the-global-news.github.io-/)  
 
 ---
 
