@@ -440,7 +440,7 @@ The creation of the web app followed a structured and organised process to ensur
 ### 1. Create the Component
 Each feature of the web app is developed as a reusable custom HTML component using JavaScript. These components encapsulate their own logic and can easily be integrated into multiple pages. 
 
-**Example of a Component:**
+#### Example of a Component:  
 ```javascript
 class TheComponent extends HTMLElement {
   connectedCallback() {
@@ -448,13 +448,13 @@ class TheComponent extends HTMLElement {
       "jsonText": [
         {
           "TheText": "random text",
-        },
+        }
       ]
     };
 
     this.innerHTML = `
       <div class="news">
-        <div></div>
+        <p>${newsData.jsonText[0].TheText}</p>
       </div>
     `;
   }
