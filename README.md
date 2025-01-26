@@ -37,10 +37,105 @@ Global News embodies the ideals of journalistic freedom and technology as a mean
 | <img src="./assets/screenshots/pc-screen.jpeg" alt="Desktop Screenshot" width="330"> | <img src="./assets/screenshots/ipad-mini.jpeg" alt="Tablet Screenshot" width="150"> | <img src="./assets/screenshots/smartphone.png" alt="Mobile Screenshot" width="50"> |
 
 ---
+## Design Style
 
+The project features a sleek, modern design with a dark theme and smooth gradients to create an immersive user experience.
+
+### Key Design Features:
+
+- **Background**: The body background uses a *radial gradient* that transitions from a dark blue (#1B2735) at the bottom to a deep black (#090A0F) at the top, providing a subtle, immersive effect.
+- **Font**: The project uses the *Ubuntu* font-family, which is sans-serif and modern, ensuring readability and a clean, minimalist look.
+- **Text Colour**: The text colour is set to white (#fff), offering strong contrast against the dark background for clear visibility.
+- **Layout**: The body is set to take up the full width of the screen and has a minimum height of 100vh (viewport height), ensuring that content stretches to fill the entire screen. The vertical overflow is set to *overlay*, allowing smooth scrolling without additional space at the edges.
+
+ ### Design Resources  
+All pictures used in this project were sourced from [Pexels](https://www.pexels.com/), a platform offering high-quality, royalty-free images. These images were carefully selected to enhance the visual appeal and user experience of the web application.  
+
+
+### Additional Styling:
+
+- **Lines**: Horizontal lines are styled with a height of 2px and a grey colour. This subtle element helps to separate sections of content visually.
+  
+```css
+.line {
+    height: 2px;
+    border-width: 0;
+    color: rgb(255, 255, 255);
+    background-color: gray;
+}
+```
+---
 ## 🗂️ Project Structure
-
-/project-folder
+```
+/The Global News
+    /_mocks_
+        jquery.js
+    /_tests_
+        header.test.js
+        Breaking-news.test.js
+        1item_slide_card.test.js
+        navbar.test.js
+        footer.test.js
+        content.test.js
+        cards.test.js
+        business-news.test.js
+        sport-news.test.js
+        technology-news.test.js
+        politics-news.test.js
+        dropdown.test.js
+        slide-card.test.js
+        social-buttoms.test.js
+        contact-form.test.js
+        cards-jornalis.test.js
+        history-about.test.js
+        sport-news.test.js
+        politics-news.test.js
+        tech-news.test.js
+        business-news.test.js
+         
+    /assets
+       /images
+          business1.jpg
+          business2.jpg
+          business3.jpg
+          sport1.jpg
+          sport2.jpg
+          sport3.jpg
+          tech1.jpg
+          tech2.jpg
+          tech3.jpg
+          politics1.jpg
+          politics2.jpg
+          politics3.jpg
+          the-office.jpg
+          carlos.jpg
+          laura.jpg
+          marie.jpg
+          sophia.jpg
+       /wireframes
+          about-wireframe.png
+          form-wireframe.png
+          home-wireframe.png
+          news-wireframe.png
+       /wireframes_components
+          about_header_component.png
+          card_jornalist_component.png
+          contact_form_component.png
+          dropdown_component.png
+          footer_component.png
+          header_component.png
+          mix_cards_component.png
+          navbar_component.png
+          news_component.png
+          news_section_component.png
+          slide_card_component.png
+          social_buttoms_component.png
+          the_office_component.png
+          time_line_component.png
+        /screenshots
+          ipad-mini.jpeg
+          pc-screen.jpeg
+          smartphone.png     
     /components
         header.js
         Breaking-news.js
@@ -105,31 +200,68 @@ Global News embodies the ideals of journalistic freedom and technology as a mean
             send-contact.html
         contact.html
         about.html
-    /screenshots
-        ipad-mini.jpeg
-        pc-screen.jpeg
-        smartphone.png
+    /node_modules
+    .babelrc   
     index.html
-
+    jest.setup.js
+    package-lock.json
+    package.json
+    README.md
+```
 
 ---
 
 ## 📚 Technologies Used
 
-- **HTML**: For building the structure of the website.
-- **CSS**: For styling and ensuring responsiveness.
-- **JavaScript**: For interactivity and dynamic content.
-- **JSON**: To manage and structure news data efficiently.
-- **Bootstrap** & **W3.CSS**: To enhance layout and styling.
+The project utilises a combination of modern frontend technologies and tools to create an interactive and responsive news web app. Below is a list of the main technologies used:
+
+### Frontend Technologies:
+
+- **HTML5**  
+  HTML5 provides the basic structure of the web pages, including semantic elements like `<header>`, `<footer>`, and `<nav>`, helping with both the accessibility and SEO of the site.  
+  [HTML5 Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML)
+
+- **CSS3**  
+  CSS3 is used for styling the components of the web app. Features like radial gradients, flexbox, and CSS animations contribute to a clean, responsive design.  
+  [CSS3 Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS)
+
+- **JavaScript**  
+  JavaScript is used to create dynamic behaviour within the web app, such as updating breaking news in real-time and handling user interactions.  
+  [JavaScript Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+- **JQuery**  
+  JQuery simplifies HTML document traversal, event handling, and animations, allowing for efficient DOM manipulation and interaction within the web app.  
+  [JQuery Documentation](https://jquery.com/)
+
+- **JSON**  
+  JSON is used for data handling, allowing the app to efficiently store and retrieve information, particularly for dynamic content like the news articles.  
+  [JSON Documentation](https://www.json.org/json-en.html)
+
+- **Google Fonts**  
+  Google Fonts is used for enhancing typography within the web app, offering a wide selection of fonts for improved readability and design aesthetics.  
+  [Google Fonts Website](https://fonts.google.com/)
+
+- **Font Awesome**  
+  Font Awesome is used to integrate vector icons, providing scalable icons that enhance the app’s user interface with visually appealing and easy-to-use icons.  
+  [Font Awesome Website](https://fontawesome.com/)
+
+- **Jest**  
+  Jest is a testing framework used for unit and integration testing in the project. It ensures the functionality and reliability of various components, such as dynamically updating news, clock functionality, and animations.  
+  [Jest Documentation](https://jestjs.io/)
+
+- **Procreate**  
+  Procreate, a powerful digital illustration tool, was used to sketch and create wireframes for the design of the app. As an experienced illustrator, Procreate helped me quickly visualise and create the UI/UX layout before moving on to the development stage.  
+  [Procreate Website](https://procreate.art/)
+
 
 ---
 
 ## 🔨 How to Run the Project
 
 1. Clone the repository from GitHub:
-   ```bash
+```bash
    git clone https://github.com/ToniEstarlich/Global-News
-
+```
 
 ### Changes & Additions:
 - The entire project structure, screenshots, and features are now combined seamlessly.
@@ -150,9 +282,10 @@ The issue occurred because there were changes on the remote repository that were
 
 1. **Pulled the latest changes** from the remote repository to synchronize the local branch with the remote one:
 
-   ```bash
-   git pull origin master
-   ```
+```bash
+git pull origin master
+```
+
 ### Resolved Merge Conflicts
 
 During the pull process, merge conflicts appeared. After editing the conflicted files, they were staged and committed with the following commands:
@@ -172,8 +305,199 @@ git push origin master
 
 This process ensured that both the local and remote repositories were synchronized, resolving the issue and allowing for a successful push.
 
-  
+--- 
+ ## HTML and CSS Validation
 
+### W3C HTML Validation
+The HTML code was validated using the [W3C HTML Validator](https://validator.w3.org/nu/). During validation, I reviewed the following:
+
+- **Errors**: Fixed critical issues like unclosed tags, missing or incorrect attributes, and improper nesting of elements.
+- **Warnings**: Addressed warnings related to accessibility, such as missing `alt` attributes for images and ensuring all tags were correctly structured.
+
+**Key Points Checked:**
+- Properly closed HTML tags
+- Correct usage of semantic tags (e.g., `<header>`, `<nav>`, `<footer>`)
+- Accessibility attributes (e.g., `alt` for images)
+- Valid nesting of elements (e.g., `<ul>` containing only `<li>`)
+
+### W3C CSS Validation
+The CSS code was validated using the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator). During validation, I reviewed the following:
+
+- **Errors**: Corrected invalid properties, values, and CSS syntax errors.
+- **Warnings**: Addressed warnings related to browser compatibility, outdated properties, and improved efficiency.
+
+**Key Points Checked:**
+- Valid CSS properties and values
+- Use of modern CSS techniques like flexbox and grid
+- Ensured cross-browser compatibility by including necessary vendor prefixes
+
+After making the necessary corrections, I revalidated both the HTML and CSS to ensure they meet the latest web standards.
+
+---
+## Test Results
+
+All tests passed successfully, confirming the functionality of the `aboutHeaderComponent`.
+
+---
+## Jest Testing
+
+The project was thoroughly tested using Jest to ensure that all components function correctly. A total of **22 components** were tested, covering various aspects of the application, including dynamic content rendering, user interactions, and responsive behaviours.
+
+The project relies on `Node.js` and `Jest` for testing. Two important files, `package.json` and `package-lock.json`, are used to manage the dependencies and the environment for the project.
+
+### package.json
+The `package.json` file is a fundamental part of the Node.js ecosystem. It holds metadata about the project, such as the project's name, version, scripts, and dependencies. For this project, it is used to specify the Jest testing framework as a dependency and to define the testing script to run tests.
+
+The `package.json` file includes:
+
+- **Dependencies**: This includes Jest, which is used to run the unit and integration tests for the components.
+- **Scripts**: Common commands to run the project, such as `npm test` to run the tests using Jest.
+
+You can find the `package.json` file in the root directory of the project.
+
+### package-lock.json
+The `package-lock.json` file is automatically generated when you run `npm install`. It locks the versions of the dependencies to ensure that the project works the same way across different environments. It helps to maintain consistent and reliable installations of dependencies.
+
+The `package-lock.json`:
+
+- Ensures that the exact same versions of dependencies are installed on every machine that clones the project.
+- Helps with dependency management by preventing any unintended updates or breaking changes when installing dependencies.
+
+
+### Key Tests Included:
+- **Component Structure**: Ensured that each component rendered its expected structure, including dynamic elements like news lists and clocks.
+- **State Updates**: Verified that components like the clock and breaking news list updated in real-time as expected.
+- **CSS and Animation**: Tested animation durations and ensured they were set correctly, alongside component styling.
+- **Error Handling**: Checked for correct behaviour when missing or incorrect data was provided.
+
+
+All tests passed successfully, ensuring the components are working as expected.
+
+---
+## Wireframes
+
+The project consists of four main wireframes: **Home**, **About**, **News**, and **Contact**. Each wireframe is designed to serve a specific purpose within the application. Below is an overview of each wireframe and its components.
+
+### 1. Home Wireframe
+<img src="./assets/wireframes/home-wireframe.png" alt="Desktop Screenshot" width="630"><br>
+
+The **Home** wireframe serves as the landing page for the project. It contains a navigation bar, a main header, sections for different categories of news (Politics, Business, Technology, and Sports), as well as a carousel of news headlines and a breaking news section. The layout is divided into various components that are reusable throughout the project.
+
+**Key Sections:**
+- **Navbar**: Contains links for navigation.
+- **Header**: Displays the project’s header information.
+- **News Sections**: Categories of news such as Politics, Business, Technology, and Sports.
+- **Cards Slider**: A carousel of selected news.
+- **Breaking News**: A section at the bottom of the screen that shows the most important current events.
+- **Footer**: Contains the project’s footer content.
+
+### 2. About Wireframe
+<img src="./assets/wireframes/about-wireframe.png" alt="Desktop Screenshot" width="630"><br>
+
+The **About** wireframe introduces the project, including a timeline of its journey and the people behind it. The content is organized into sections using custom components for headers, journalist cards, and a timeline.
+
+**Key Sections:**
+- **Navbar**: The navigation menu is always accessible.
+- **About Header**: Displays the introduction or description of the project.
+- **Timeline**: A timeline of the project’s journey.
+- **Journalist Cards**: A section showcasing journalists contributing to the news.
+- **Footer**: Contains the footer with necessary links.
+
+### 3. News Wireframe
+<img src="./assets/wireframes/news-wireframe.png" alt="Desktop Screenshot" width="630"><br>
+
+The **News** wireframe displays an individual news article along with additional news components like sliders and mix cards. Each news piece is structured using custom components for different types of content.
+
+**Key Sections:**
+- **Navbar**: Navigation bar for easy access to different parts of the site.
+- **About Header**: Includes a brief description related to the current news section.
+- **News Content**: Displays detailed content about the news (e.g., Politics).
+- **Slider & Mix Card**: Shows additional or related news.
+- **Breaking News**: Displays the most urgent news at the bottom.
+- **Footer**: Contains the footer section.
+
+### 4. Contact Wireframe
+<img src="./assets/wireframes/form-wireframe.png" alt="Desktop Screenshot" width="630"><br>
+
+The **Contact** wireframe contains a contact form that allows users to get in touch with the project team. It also includes the usual navigation and footer components.
+
+**Key Sections:**
+- **Navbar**: Navigation bar for site-wide access.
+- **About Header**: Introduction to the contact section.
+- **Contact Form**: A form for users to fill out and contact the team.
+- **Footer**: Footer information.
+
+### Wireframe Design Tools
+
+These wireframes were designed using **Procreate**, a digital illustration application. It allowed for quick and efficient sketching and planning of the layout and structure of the website before proceeding with the development. Procreate's intuitive interface enabled me to visualise the design concepts effectively and iteratively.
+
+---
+## Development Process
+
+The creation of the web app followed a structured and organised process to ensure modularity, reusability, and quality across all components. Below are the steps that were followed:
+
+### 1. Create the Component
+Each feature of the web app is developed as a reusable custom HTML component using JavaScript. These components encapsulate their own logic and can easily be integrated into multiple pages. 
+
+**Example of a Component:**
+```javascript
+class TheComponent extends HTMLElement {
+  connectedCallback() {
+    const newsData = {
+      "jsonText": [
+        {
+          "TheText": "random text",
+        },
+      ]
+    };
+
+    this.innerHTML = `
+      <div class="news">
+        <div></div>
+      </div>
+    `;
+  }
+}
+
+window.customElements.define('the-component', TheComponent);
+```
+### 2. Design the HTML Component with CSS
+After defining the functionality of a component, a corresponding CSS file is created to style it. This approach separates concerns, making the project easier to maintain and scale.
+
+**Example Workflow:**
+- Define a component's structure in JavaScript.
+- Write a separate CSS file to style the component.
+- Link the CSS file to the component or global styles.
+
+---
+
+### 3. Structure the HTML Page
+The application is divided into different HTML pages, such as **Home**, **About**, **News**, and **Contact**, each using the custom components created in Step 1. The structure of each page is carefully designed to provide a user-friendly interface while adhering to semantic HTML standards.
+
+**Example of HTML Structure:**
+```html
+<body>
+  <nav>
+    <navbar-component></navbar-component>
+  </nav>
+  <header>
+    <about-header></about-header>
+  </header>
+  <section>
+    <the-component></the-component>
+  </section>
+  <footer>
+    <footer-component></footer-component>
+  </footer>
+</body>
+```
+### 4. Testing
+To ensure quality and functionality, the following testing processes were conducted:
+
+- **Jest**: Used for unit testing custom components to verify their behaviour and logic.
+- **W3C Validator**: Used to validate the HTML and CSS for compliance with web standards, ensuring cross-browser compatibility and accessibility.
+
+This systematic approach ensures that the web app is modular, visually appealing, and meets high standards of quality.
 
 ---
 
@@ -237,15 +561,7 @@ Ensure the associated CSS file is included:
 
 - **Rendering Header**: Ensures the about header component renders correctly with the proper title and description.
 - **Responsive Layout**: Verifies that the header adjusts properly on different screen sizes.
-
----
-
-## Test Results
-
-All tests passed successfully, confirming the functionality of the `aboutHeaderComponent`.
-
----
-
+-
 ## Test Output:
 
 ```bash
