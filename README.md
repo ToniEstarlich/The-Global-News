@@ -469,13 +469,47 @@ class TheComponent extends HTMLElement {
 
 window.customElements.define('the-component', TheComponent);
 ```
-### 2. Design the HTML Component & `<body>` pages with CSS
-After defining the functionality of a component, a corresponding CSS file is created to style it. This approach separates concerns, making the project easier to maintain and scale.
+### 2. Design the HTML Component & `<body>` Pages with CSS
+After defining the functionality of a component, a corresponding CSS file is created to style it. Separating the logic and presentation ensures the project is easier to maintain, scale, and debug.
 
+#### 1. `style.css` – Global Stylesheet
+This stylesheet applies general styles for the HTML pages, ensuring consistency and resetting browser defaults.
+
+```css
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333; /* Correct spelling of "colour" */
+  overflow-x: hidden;
+}
+```
+#### 2. `TheComponent.css` – Component-Specific Styles
+Each custom component is styled in its own CSS file to ensure modularity. Below is an example of styling for a news card component:
+
+```css
+.news {
+  padding: 20px; /* Add inner spacing */
+  gap: 16px; /* Space between child elements */
+  background-color: #fff; /* Light background for contrast */
+  border: 1px solid #ddd; /* Subtle border */
+  border-radius: 8px; /* Smooth corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+```
 **Example Workflow:**
-- Define a component's structure in JavaScript.
-- Write a separate CSS file to style the component.
-- Link the CSS file to the component or global styles.
+
+1. Define the component's structure and functionality in JavaScript.
+2. Write a separate CSS file to style the component's layout, colours, and behaviour.
+3. Link the component's CSS file to the global styles or import it where needed.
 
 ---
 
