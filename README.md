@@ -440,7 +440,7 @@ These wireframes were designed using **Procreate**, a digital illustration appli
 
 ---
 ## Development Process
-<img src="./assets/wireframes_components/developmen-process.png" alt="Desktop Screenshot" width="630"><br>
+<img src="./assets/wireframes/development-process.png" alt="Desktop Screenshot" width="630"><br>
 
 The creation of the web app followed a structured and organised process to ensure modularity, reusability, and quality across all components. Below are the steps that were followed:
 
@@ -469,7 +469,7 @@ class TheComponent extends HTMLElement {
 
 window.customElements.define('the-component', TheComponent);
 ```
-### 2. Design the HTML Component with CSS
+### 2. Design the HTML Component & `<body>` pages with CSS
 After defining the functionality of a component, a corresponding CSS file is created to style it. This approach separates concerns, making the project easier to maintain and scale.
 
 **Example Workflow:**
