@@ -73,7 +73,7 @@ All pictures used in this project were sourced from [Pexels](https://www.pexels.
 ```
 ---
 ## 🗂️ Project Structure
-```
+```bash
 /The Global News
     /_mocks_
         jquery.js
@@ -518,12 +518,20 @@ The application is divided into different HTML pages, such as **Home**, **About*
 
 **Example of HTML Structure:**
 ```html
+<head>
+  <!--css styles-->
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/about.css">
+  <link rel="stylesheet" href="../css/the-component.css">
+  <link rel="stylesheet" href="../css/footer.css">
+</head>
+
 <body>
   <nav>
     <navbar-component></navbar-component>
   </nav>
   <header>
-    <about-header></about-header>
+    <header-component></header-component>
   </header>
   <section>
     <the-component></the-component>
@@ -531,6 +539,12 @@ The application is divided into different HTML pages, such as **Home**, **About*
   <footer>
     <footer-component></footer-component>
   </footer>
+ 
+  <!--Including the compoents JavaScript-->
+  <script src="../components/navbar.js"></script>
+  <script src="../components/header.js"></script>
+  <script src="../components/the-component.js"></script>
+  <script src="../components/footer.js"></script>
 </body>
 ```
 ### 4. Testing
