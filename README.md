@@ -540,7 +540,7 @@ The application is divided into different HTML pages, such as **Home**, **About*
     <footer-component></footer-component>
   </footer>
  
-  <!--Including the compoents JavaScript-->
+  <!--Including the components JavaScript-->
   <script src="../components/navbar.js"></script>
   <script src="../components/header.js"></script>
   <script src="../components/the-component.js"></script>

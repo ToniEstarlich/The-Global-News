@@ -40,6 +40,12 @@
 }
 
 /* Responsive adjustments */
+@media (max-height: 1024px) {
+    .main-title {
+        font-size: 270%;
+    } 
+}
+
 
 @media (max-width: 1180px) {
     .main-title {

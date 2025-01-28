@@ -82,20 +82,18 @@ testament to the enduring importance of quality journalism.
     const office = newsData["the-office"][0];
 
     this.innerHTML = `
-      <div class="office-container ">
-        <img class="office-image" src="${office.photo}" alt="Me" width="1500" height="700">
-          <div class="w3-display-middle w3-padding-large w3-border w3-wide w3-text-light-grey w3-center">
-            <h1 class="w3-hide-medium w3-hide-small w3-xxxlarge">${office.name}</h1>
-            <h5 class="w3-hide-large" style="white-space:nowrap">${office.name}</h5>
-            <h3 class="w3-hide-medium w3-hide-small"></h3>
-          </div>
-      
-      <div class="the-office-container">
+     <div class="office-container">
+       <div class="image-container">
+         <img class="office-image" src="${office.photo}" alt="Me">
+         <h1 class="office-title w3-hide-medium w3-hide-small">${office.name}</h1>
+       </div>
+     <div class="the-office-container">
         <div class="office-details">
-          ${office.bio}
-        </div>
-      </div>
-    </div>
+         ${office.bio}
+         </div>
+       </div>
+     </div>
+
     `;
   }
 }

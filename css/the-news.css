@@ -80,6 +80,10 @@ h2.source {
     padding: 20px;
 }
 
+.news-body {
+    margin: 5%;
+}
+
 .introduction,
 .tip-1,
 .tip-2,
