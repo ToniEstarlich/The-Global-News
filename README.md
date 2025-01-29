@@ -232,6 +232,16 @@ The project utilises a combination of modern frontend technologies and tools to 
   CSS3 is used for styling the components of the web app. Features like radial gradients, flexbox, and CSS animations contribute to a clean, responsive design.  
   [CSS3 Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
+- **W3.CSS**  
+W3.CSS, a lightweight and responsive CSS framework by W3Schools, was used to style and structure the project. W3.CSS's built-in classes helped streamline layout, typography, and UI elements efficiently.  
+[W3.CSS Website](https://www.w3schools.com/w3css/)
+
+- **Bootstrap**  
+Bootstrap, a popular front-end framework, was used to design a responsive and visually appealing interface for the project. Its prebuilt components and grid system allowed for efficient layout structuring, ensuring consistency across different screen sizes.   
+[Bootstrap Website](https://getbootstrap.com/)  
+
+
+
 - **JavaScript**  
   JavaScript is used to create dynamic behaviour within the web app, such as updating breaking news in real-time and handling user interactions.  
   [JavaScript Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
@@ -317,29 +327,106 @@ This process ensured that both the local and remote repositories were synchroniz
 
 ### W3C HTML Validation
 The HTML code was validated using the [W3C HTML Validator](https://validator.w3.org/nu/). During validation, I reviewed the following:
+## Fixing Fatal Error in HTML Validation  
 
-- **Errors**: Fixed critical issues like unclosed tags, missing or incorrect attributes, and improper nesting of elements.
-- **Warnings**: Addressed warnings related to accessibility, such as missing `alt` attributes for images and ensuring all tags were correctly structured.
+### **Problem:**  
+When validating the HTML file with the W3C Validator, the following **fatal error** appeared:  
 
-**Key Points Checked:**
-- Properly closed HTML tags
-- Correct usage of semantic tags (e.g., `<header>`, `<nav>`, `<footer>`)
-- Accessibility attributes (e.g., `alt` for images)
-- Valid nesting of elements (e.g., `<ul>` containing only `<li>`)
+```
+Fatal Error: Cannot recover after last error. Any further errors will be ignored.
+
+From line 38, column 1; to line 38, column 7
+
+↩</head>↩<title>The Gl
+```
+❌ Incorrect Structure **(causes error):**
+```html
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<title>The Global News</title> <!-- ❌ This should be inside <head> -->
+
+<body>
+```
+
+### **Cause of the Error:**  
+The `<title>` tag was placed **outside the `<head>` section**, which breaks the document structure and causes the validation to fail.  
+
+### **Solution:**  
+Move the `<title>` tag inside the `<head>` section:  
+
+#### ✅ **Correct Structure:**
+```html
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>The Global News</title>  <!-- ✅ Title placed correctly inside <head> -->
+
+    <!-- Other meta tags and stylesheets -->
+</head>
+```
+## Result After Fixing  
+
+- The W3C Validator no longer shows the **Fatal Error**.  
+- The HTML document structure is now **correct**.  
+- The page loads without **structural issues** in all browsers.  
+
 
 ### W3C CSS Validation
 The CSS code was validated using the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator). During validation, I reviewed the following:
 
-- **Errors**: Corrected invalid properties, values, and CSS syntax errors.
-- **Warnings**: Addressed warnings related to browser compatibility, outdated properties, and improved efficiency.
+# CSS Fixes for `cards-journalist.css`
 
-**Key Points Checked:**
-- Valid CSS properties and values
-- Use of modern CSS techniques like flexbox and grid
-- Ensured cross-browser compatibility by including necessary vendor prefixes
+## Issue 1: Invalid Negative `gap` Value in `.row`
+- **Error:** Negative values are not allowed for `gap` in CSS.
+- **Fix:** Change `gap: -60px;` to `gap: 0;` or adjust spacing using `margin-top`.
 
-After making the necessary corrections, I revalidated both the HTML and CSS to ensure they meet the latest web standards.
-
+### **Before:**
+```css
+.row {
+    gap: -60px; /* ❌ Invalid */
+}
+```
+### After:
+```css
+.row {
+    gap: 0; /* ✅ Valid */
+}
+```
+If reducing spacing is necessary, use:
+```css
+.row {
+    margin-top: -60px; /* Moves content upwards */
+}
+```
+---
+## Issue 2: Identical `color` and `background-color` in `.card`
+**Error:** The .card element has the same color and background-color, making text unreadable.
+Fix: Adjust either color or background-color to improve contrast.
+### Before:
+```css
+.card {
+    color: #bfc9cd;
+    background-color: #bfc9cd; /* ❌ Text blends with background */
+}
+```
+### After:
+```css
+.card {
+    color: #273338; /* ✅ Darker text */
+    background-color: #bfc9cd;
+}
+```
+Alternatively, you can use:
+```css
+.card {
+    color: white;
+    background-color: #bfc9cd;
+}
+```
 ---
 ## Test Results
 

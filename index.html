@@ -46,7 +46,7 @@
    <title>The Global News</title>
 </head>
 <body>
-     <!-- Use the custom components-->
+     <!--Use the custom components-->
      <nav>
       <navbar-component></navbar-component>
       <dropdown-component></dropdown-component>
@@ -56,20 +56,23 @@
       <header-component></header-component> 
      </header>
      
-     <section  class="section-index">
+     <main  class="section-index">
+      <!--News section component-->
         <politics-component id="politicsNews"></politics-component>
         <business-component id="businessNews"></business-component>
         <tech-component id="techNews"></tech-component>
         <sport-component id="sportsSection"></sport-component>
+      <!--Slide cards component-->
         <cardslides-component style="margin-top: 10%;"></cardslides-component>
+      <!--Breaking News component-->
         <Breakingnews-component></Breakingnews-component>
-     </section>
+     </main>
       
      <footer>
        <footer-component></footer-component>
      </footer>
      
-    <script src="js/scripts.js"></script>
+   <!--date, navbar, dropdown, header  components-->
     <script src="components/date.js"></script>
     <script src="components/navbar.js"></script>
     <script src="components/dropdown.js"></script>
@@ -79,13 +82,19 @@
     <!--social bottoms components-->
     <script src="components/social-buttoms.js"></script>
 
-    <!-- the  script card slider -->
+    <!-- the  script card slider header -->
     <script src="components/Breaking-news.js"></script>
+   
+    <!--cards news sections components-->
     <script src="components/politics-section.js"></script>
     <script src="components/business-section.js"></script>
     <script src="components/technology-section.js"></script>
     <script src="components/sport-section.js"></script>
+
+    <!--slide cards component-->
     <script src="components/slide-card.js"></script>
+    
+    <!--footer component-->
     <script src="components/footer.js"></script>
     
     <!-- jQuery ( complete version) -->
