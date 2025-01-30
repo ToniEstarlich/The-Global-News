@@ -1,7 +1,7 @@
 /**
  * @jest-environment jsdom
  */
-import '../components/About-components/about-header.js'; // Adjust path if necessary
+import '../components/About-components/about-header.js';
 
 describe('AboutHeader Component', () => {
   let aboutHeader;

@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import '../components/date.js'; // Replace with the correct path to your DateComponent file
+import '../components/date.js'; 
 
 describe('DateComponent', () => {
   let element;

@@ -22,7 +22,7 @@ describe('NavbarComponent', () => {
     navbar.connectedCallback(); // Trigger the component lifecycle
     const nav = document.querySelector('nav.navbar');
     expect(nav).toBeInTheDocument();
-    expect(nav).toHaveClass('navbar-dark'); // Adjust this based on your actual class
+    expect(nav).toHaveClass('navbar-dark'); // Adjust this based  actual class
   });
 
   test('renders links with correct paths for the home page', () => {

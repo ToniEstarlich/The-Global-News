@@ -726,7 +726,7 @@ window.customElements.define('the-component', TheComponent);
 ---
 
 # Testing Components
-Through hands-on experience with JEST, I’ve tested various components, ensuring functionality, accuracy, and reliability, much like a 'Book of Pythagoras'—a detailed record of logical and methodical trials.
+Through hands-on experience with JEST, I’ve tested various components to ensure functionality, accuracy, and reliability. Given the project's complexity, with its 22 components, the process required continuous adjustments. This section documents the iterative resolution of issues, structuring problems and solutions much like a 'Book of Pythagoras
 
 ---
 # About Header Component
@@ -1010,22 +1010,22 @@ While running npm test in the project, you may encounter the following error mes
 Validation Error:
  Module <rootDir>/setupTests.js in the setupFilesAfterEnv option was not found.
  ```
-This occurs because Jest is looking for a setupTests.js file to configure the testing environment, such as adding custom matchers from @testing-library/jest-dom. Without this file, Jest will not know how to properly set up the environment for testing.
+This occurs because Jest is looking for a `setupTests.js` file to configure the testing environment, such as adding custom matchers from @testing-library/jest-dom. Without this file, Jest will not know how to properly set up the environment for testing.
 
 ---
-## Solution: Adding setupTests.js
+## Solution: Adding `setupTests.js`
 Create the setupTests.js File:
-Add a new file called setupTests.js in the root directory of your project, next to package.json.
+Add a new file called `jest.setup.js` in the root directory of your project, next to package.json.
 
 ## Add Jest DOM Import:
-Import @testing-library/jest-dom into the setupTests.js file:
+Import @testing-library/jest-dom into the jest.setup.js file:
 
 ```javascript
 
 import '@testing-library/jest-dom';
 Update Jest Configuration:
 ```
-In your package.json, add a setupFilesAfterEnv key to the Jest configuration. This will tell Jest where to look for the setup file.
+In the package.json, add a setupFilesAfterEnv key to the Jest configuration. This will tell Jest where to look for the setup file.
 
 ## Example:
 

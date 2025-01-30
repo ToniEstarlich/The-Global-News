@@ -13,14 +13,14 @@ jest.mock('owl.carousel', () => ({
   const $ = require('jquery');
   global.$ = $;
   
-  // Import the component you're testing
+  // Import the component testing
   require('../components/1item-slide-card');
   
   describe('ItemCardSlides Component', () => {
     let itemCardSlides;
   
     beforeEach(() => {
-      // Set up the mock DOM for your custom element
+      // Set up the mock DOM  custom element
       document.body.innerHTML = '<itemcardslides-component></itemcardslides-component>';
       itemCardSlides = document.querySelector('itemcardslides-component');
     });
@@ -31,7 +31,7 @@ jest.mock('owl.carousel', () => ({
   
     test('should dynamically generate the correct HTML structure', () => {
       // Ensure the structure is being generated dynamically
-      expect(itemCardSlides.innerHTML).toContain('<div class="post-slide">'); // Example check
+      expect(itemCardSlides.innerHTML).toContain('<div class="post-slide">'); 
     });
   
     test('should initialize Owl Carousel', () => {

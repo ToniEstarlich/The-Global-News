@@ -1,6 +1,6 @@
 // _tests_/social-buttoms.test.js
 
-import '../components/social-buttoms.js';  // Import the component
+import '../components/social-buttoms.js';  
 
 describe('SocialComponent', () => {
     let component;

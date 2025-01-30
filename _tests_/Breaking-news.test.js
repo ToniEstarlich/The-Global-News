@@ -25,7 +25,7 @@ describe('BreakingNewsComponent', () => {
         const breakingNewsList = breakingNewsComponent.querySelector('#breaking-news-list');
         expect(breakingNewsList).not.toBeNull();  // Check that it exists
     
-        // Now check the innerHTML
+        
         expect(breakingNewsComponent.innerHTML).toContain('<div class="breaking-news">');
         expect(breakingNewsComponent.innerHTML).toContain('<div class="clock" id="clock"></div>');
     });
@@ -57,7 +57,7 @@ describe('BreakingNewsComponent', () => {
         Object.defineProperty(newsList, 'scrollWidth', { value: 1000 }); // Mock a value
         Object.defineProperty(newsList.parentElement, 'offsetWidth', { value: 500 }); // Mock a value
     
-        // Apply the animation duration logic manually (this should be inside your connectedCallback)
+        // Apply the animation duration logic manually 
         const duration = 20;
         const listWidth = newsList.scrollWidth;
         const containerWidth = newsList.parentElement.offsetWidth;

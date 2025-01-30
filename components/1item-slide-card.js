@@ -1,6 +1,5 @@
 import $ from 'jquery';
 
-
 class ItemCardSlides extends HTMLElement {
     connectedCallback() {
         // Determine the base path for images and links dynamically

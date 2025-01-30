@@ -8,7 +8,7 @@ jest.mock('owl.carousel', () => ({
   global.$ = $;
   
   // Import the component you’re testing
-  require('../components/slide-card'); // Update the path to your component
+  require('../components/slide-card'); 
   
   describe('CardSlides Component', () => {
     let cardSlides;
