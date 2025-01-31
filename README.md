@@ -273,201 +273,6 @@ Bootstrap, a popular front-end framework, was used to design a responsive and vi
 
 ---
 
-## 🔨 How to Run the Project
-
-1. Clone the repository from GitHub:
-```bash
-   git clone https://github.com/ToniEstarlich/Global-News
-```
-
-### Changes & Additions:
-- The entire project structure, screenshots, and features are now combined seamlessly.
-- Screenshots are included with appropriate file paths.
-- The "How to Run the Project" section and repository link are integrated for completeness.
-
----
-
-# Problem and resolution
----
-### Problem: Unable to Push Changes Due to Remote Conflicts
-
-While attempting to push changes to the remote repository, the following error occurred:
-
-### Resolution
-
-The issue occurred because there were changes on the remote repository that were not present locally. To resolve this:
-
-1. **Pulled the latest changes** from the remote repository to synchronize the local branch with the remote one:
-
-```bash
-git pull origin master
-```
-
-### Resolved Merge Conflicts
-
-During the pull process, merge conflicts appeared. After editing the conflicted files, they were staged and committed with the following commands:
-
-```bash
-git add .
-git commit -m "Resolved merge conflicts"
-```
-### Pushed Changes to Remote Repository
-
-After resolving the merge conflicts and committing the changes, the updates were pushed back to the remote repository with the following command:
-
-```bash
-git push origin master
-```
-### Synchronization of Local and Remote Repositories
-
-This process ensured that both the local and remote repositories were synchronized, resolving the issue and allowing for a successful push.
-
---- 
- ## HTML and CSS Validation
-
-### W3C HTML Validation
-The HTML code was validated using the [W3C HTML Validator](https://validator.w3.org/nu/). During validation, I reviewed the following:
-## Fixing Fatal Error in HTML Validation  
-
-### **Problem:**  
-When validating the HTML file with the W3C Validator, the following **fatal error** appeared:  
-
-```
-Fatal Error: Cannot recover after last error. Any further errors will be ignored.
-
-From line 38, column 1; to line 38, column 7
-
-↩</head>↩<title>The Gl
-```
-❌ Incorrect Structure **(causes error):**
-```html
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-
-<title>The Global News</title> <!-- ❌ This should be inside <head> -->
-
-<body>
-```
-
-### **Cause of the Error:**  
-The `<title>` tag was placed **outside the `<head>` section**, which breaks the document structure and causes the validation to fail.  
-
-### **Solution:**  
-Move the `<title>` tag inside the `<head>` section:  
-
-#### ✅ **Correct Structure:**
-```html
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>The Global News</title>  <!-- ✅ Title placed correctly inside <head> -->
-
-    <!-- Other meta tags and stylesheets -->
-</head>
-```
-## Result After Fixing  
-
-- The W3C Validator no longer shows the **Fatal Error**.  
-- The HTML document structure is now **correct**.  
-- The page loads without **structural issues** in all browsers.  
-
-
-### W3C CSS Validation
-The CSS code was validated using the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator). During validation, I reviewed the following:
-
-# CSS Fixes for `cards-journalist.css`
-
-## Issue 1: Invalid Negative `gap` Value in `.row`
-- **Error:** Negative values are not allowed for `gap` in CSS.
-- **Fix:** Change `gap: -60px;` to `gap: 0;` or adjust spacing using `margin-top`.
-
-### **Before:**
-```css
-.row {
-    gap: -60px; /* ❌ Invalid */
-}
-```
-### After:
-```css
-.row {
-    gap: 0; /* ✅ Valid */
-}
-```
-If reducing spacing is necessary, use:
-```css
-.row {
-    margin-top: -60px; /* Moves content upwards */
-}
-```
----
-## Issue 2: Identical `color` and `background-color` in `.card`
-**Error:** The .card element has the same color and background-color, making text unreadable.
-Fix: Adjust either color or background-color to improve contrast.
-### Before:
-```css
-.card {
-    color: #bfc9cd;
-    background-color: #bfc9cd; /* ❌ Text blends with background */
-}
-```
-### After:
-```css
-.card {
-    color: #273338; /* ✅ Darker text */
-    background-color: #bfc9cd;
-}
-```
-Alternatively, you can use:
-```css
-.card {
-    color: white;
-    background-color: #bfc9cd;
-}
-```
----
-## Test Results
-
-All tests passed successfully, confirming the functionality of the `aboutHeaderComponent`.
-
----
-## Jest Testing
-
-The project was thoroughly tested using Jest to ensure that all components function correctly. A total of **22 components** were tested, covering various aspects of the application, including dynamic content rendering, user interactions, and responsive behaviours.
-
-The project relies on `Node.js` and `Jest` for testing. Two important files, `package.json` and `package-lock.json`, are used to manage the dependencies and the environment for the project.
-
-### package.json
-The `package.json` file is a fundamental part of the Node.js ecosystem. It holds metadata about the project, such as the project's name, version, scripts, and dependencies. For this project, it is used to specify the Jest testing framework as a dependency and to define the testing script to run tests.
-
-The `package.json` file includes:
-
-- **Dependencies**: This includes Jest, which is used to run the unit and integration tests for the components.
-- **Scripts**: Common commands to run the project, such as `npm test` to run the tests using Jest.
-
-You can find the `package.json` file in the root directory of the project.
-
-### package-lock.json
-The `package-lock.json` file is automatically generated when you run `npm install`. It locks the versions of the dependencies to ensure that the project works the same way across different environments. It helps to maintain consistent and reliable installations of dependencies.
-
-The `package-lock.json`:
-
-- Ensures that the exact same versions of dependencies are installed on every machine that clones the project.
-- Helps with dependency management by preventing any unintended updates or breaking changes when installing dependencies.
-
-
-### Key Tests Included:
-- **Component Structure**: Ensured that each component rendered its expected structure, including dynamic elements like news lists and clocks.
-- **State Updates**: Verified that components like the clock and breaking news list updated in real-time as expected.
-- **CSS and Animation**: Tested animation durations and ensured they were set correctly, alongside component styling.
-- **Error Handling**: Checked for correct behaviour when missing or incorrect data was provided.
-
-
-All tests passed successfully, ensuring the components are working as expected.
-
----
 ## Wireframes
 
 The project consists of four main wireframes: **Home**, **About**, **News**, and **Contact**. Each wireframe is designed to serve a specific purpose within the application. Below is an overview of each wireframe and its components.
@@ -722,6 +527,201 @@ Finally, register the component with a unique tag name for it (e.g., `<the-compo
 ```js
 window.customElements.define('the-component', TheComponent);
 ``` 
+
+---
+## 🔨 How to Run the Project
+
+1. Clone the repository from GitHub:
+```bash
+   git clone https://github.com/ToniEstarlich/Global-News
+```
+
+### Changes & Additions:
+- The entire project structure, screenshots, and features are now combined seamlessly.
+- Screenshots are included with appropriate file paths.
+- The "How to Run the Project" section and repository link are integrated for completeness.
+
+---
+
+# Problem and resolution
+---
+### Problem: Unable to Push Changes Due to Remote Conflicts
+
+While attempting to push changes to the remote repository, the following error occurred:
+
+### Resolution
+
+The issue occurred because there were changes on the remote repository that were not present locally. To resolve this:
+
+1. **Pulled the latest changes** from the remote repository to synchronize the local branch with the remote one:
+
+```bash
+git pull origin master
+```
+
+### Resolved Merge Conflicts
+
+During the pull process, merge conflicts appeared. After editing the conflicted files, they were staged and committed with the following commands:
+
+```bash
+git add .
+git commit -m "Resolved merge conflicts"
+```
+### Pushed Changes to Remote Repository
+
+After resolving the merge conflicts and committing the changes, the updates were pushed back to the remote repository with the following command:
+
+```bash
+git push origin master
+```
+### Synchronization of Local and Remote Repositories
+
+This process ensured that both the local and remote repositories were synchronized, resolving the issue and allowing for a successful push.
+
+--- 
+ ## HTML and CSS Validation
+
+### W3C HTML Validation
+The HTML code was validated using the [W3C HTML Validator](https://validator.w3.org/nu/). During validation, I reviewed the following:
+## Fixing Fatal Error in HTML Validation  
+
+### **Problem:**  
+When validating the HTML file with the W3C Validator, the following **fatal error** appeared:  
+
+```
+Fatal Error: Cannot recover after last error. Any further errors will be ignored.
+
+From line 38, column 1; to line 38, column 7
+
+↩</head>↩<title>The Gl
+```
+❌ Incorrect Structure **(causes error):**
+```html
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<title>The Global News</title> <!-- ❌ This should be inside <head> -->
+
+<body>
+```
+
+### **Cause of the Error:**  
+The `<title>` tag was placed **outside the `<head>` section**, which breaks the document structure and causes the validation to fail.  
+
+### **Solution:**  
+Move the `<title>` tag inside the `<head>` section:  
+
+#### ✅ **Correct Structure:**
+```html
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>The Global News</title>  <!-- ✅ Title placed correctly inside <head> -->
+
+    <!-- Other meta tags and stylesheets -->
+</head>
+```
+## Result After Fixing  
+
+- The W3C Validator no longer shows the **Fatal Error**.  
+- The HTML document structure is now **correct**.  
+- The page loads without **structural issues** in all browsers.  
+
+
+### W3C CSS Validation
+The CSS code was validated using the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator). During validation, I reviewed the following:
+
+# CSS Fixes for `cards-journalist.css`
+
+## Issue 1: Invalid Negative `gap` Value in `.row`
+- **Error:** Negative values are not allowed for `gap` in CSS.
+- **Fix:** Change `gap: -60px;` to `gap: 0;` or adjust spacing using `margin-top`.
+
+### **Before:**
+```css
+.row {
+    gap: -60px; /* ❌ Invalid */
+}
+```
+### After:
+```css
+.row {
+    gap: 0; /* ✅ Valid */
+}
+```
+If reducing spacing is necessary, use:
+```css
+.row {
+    margin-top: -60px; /* Moves content upwards */
+}
+```
+---
+## Issue 2: Identical `color` and `background-color` in `.card`
+**Error:** The .card element has the same color and background-color, making text unreadable.
+Fix: Adjust either color or background-color to improve contrast.
+### Before:
+```css
+.card {
+    color: #bfc9cd;
+    background-color: #bfc9cd; /* ❌ Text blends with background */
+}
+```
+### After:
+```css
+.card {
+    color: #273338; /* ✅ Darker text */
+    background-color: #bfc9cd;
+}
+```
+Alternatively, you can use:
+```css
+.card {
+    color: white;
+    background-color: #bfc9cd;
+}
+```
+---
+## Test Results
+
+All tests passed successfully, confirming the functionality of the `aboutHeaderComponent`.
+
+---
+## Jest Testing
+
+The project was thoroughly tested using Jest to ensure that all components function correctly. A total of **22 components** were tested, covering various aspects of the application, including dynamic content rendering, user interactions, and responsive behaviours.
+
+The project relies on `Node.js` and `Jest` for testing. Two important files, `package.json` and `package-lock.json`, are used to manage the dependencies and the environment for the project.
+
+### package.json
+The `package.json` file is a fundamental part of the Node.js ecosystem. It holds metadata about the project, such as the project's name, version, scripts, and dependencies. For this project, it is used to specify the Jest testing framework as a dependency and to define the testing script to run tests.
+
+The `package.json` file includes:
+
+- **Dependencies**: This includes Jest, which is used to run the unit and integration tests for the components.
+- **Scripts**: Common commands to run the project, such as `npm test` to run the tests using Jest.
+
+You can find the `package.json` file in the root directory of the project.
+
+### package-lock.json
+The `package-lock.json` file is automatically generated when you run `npm install`. It locks the versions of the dependencies to ensure that the project works the same way across different environments. It helps to maintain consistent and reliable installations of dependencies.
+
+The `package-lock.json`:
+
+- Ensures that the exact same versions of dependencies are installed on every machine that clones the project.
+- Helps with dependency management by preventing any unintended updates or breaking changes when installing dependencies.
+
+
+### Key Tests Included:
+- **Component Structure**: Ensured that each component rendered its expected structure, including dynamic elements like news lists and clocks.
+- **State Updates**: Verified that components like the clock and breaking news list updated in real-time as expected.
+- **CSS and Animation**: Tested animation durations and ensured they were set correctly, alongside component styling.
+- **Error Handling**: Checked for correct behaviour when missing or incorrect data was provided.
+
+
+All tests passed successfully, ensuring the components are working as expected.
 
 ---
 
