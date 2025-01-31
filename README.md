@@ -41,7 +41,7 @@ Global News embodies the ideals of journalistic freedom and technology as a mean
 
 | Desktop View | Tablet View | Mobile View |
 |--------------|-------------|-------------|
-| <img src="./assets/screenshots/pc-screen.jpeg" alt="Desktop Screenshot" width="330"> | <img src="./assets/screenshots/ipad-mini.jpeg" alt="Tablet Screenshot" width="150"> | <img src="./assets/screenshots/smartphone.png" alt="Mobile Screenshot" width="50"> |
+| <img src="./assets/screenshots/pc-screen.jpeg" alt="Desktop Screenshot" width="330"> | <img src="./assets/screenshots/ipad-mini.jpeg" alt="Tablet Screenshot" width="150"> | <img src="./assets/screenshots/smartphone.png" alt="Mobile Screenshot" width="70"> |
 
 ---
 ## Design Style
