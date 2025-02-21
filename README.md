@@ -10,6 +10,15 @@ The live version of the project is accessible here:
 - **Live Project**: [The Global News](https://toniestarlich.github.io/the-global-news.github.io-/)  
 
 ---
+## Table of Contents
+1. [The Global News](#the-global-news)
+3. [Project Structure](#project-structure)
+4. [Tecnologies used](#technologies-used)
+2. [Wireframes](#wireframes)
+5. [Development Process](#development-process)
+6. [Problem & Resolutions](#problem-and-resolution)
+7. [Testing Components](#testing-components)
+---
 
 ## 🚀 Project Vision
 
@@ -36,7 +45,7 @@ Global News embodies the ideals of journalistic freedom and technology as a mean
 
 ---
 
-## 🖥️ Screenshots
+# 🖥️ Screenshots
 
 
 | Desktop View | Tablet View | Mobile View |
@@ -72,7 +81,8 @@ All pictures used in this project were sourced from [Pexels](https://www.pexels.
 }
 ```
 ---
-## 🗂️ Project Structure
+##  Project Structure 
+# 🗂️
 ```bash
 /The Global News
     /_mocks_
@@ -218,7 +228,8 @@ All pictures used in this project were sourced from [Pexels](https://www.pexels.
 
 ---
 
-## 📚 Technologies Used
+## Technologies Used
+# 📚 
 
 The project utilises a combination of modern frontend technologies and tools to create an interactive and responsive news web app. Below is a list of the main technologies used:
 
@@ -726,7 +737,27 @@ All tests passed successfully, ensuring the components are working as expected.
 ---
 
 # Testing Components
-Through hands-on experience with JEST, I’ve tested various components to ensure functionality, accuracy, and reliability. Given the project's complexity, with its 22 components, the process required continuous adjustments. This section documents the iterative resolution of issues, structuring problems and solutions much like a 'Book of Pythagoras
+Through hands-on experience with JEST, I’ve tested various components to ensure functionality, accuracy, and reliability. Given the project's complexity, with its 22 components, the process required continuous adjustments. This section documents the iterative resolution of issues, structuring problems and solutions much like a 'Book of Pythagoras'
+
+---
+## Table of Contents
+1. [Header Component](#header-component)
+2. [Navbar Component](#navbar-component)
+3. [DropDown Component](#dropdown-component)
+4. [Social Buttons Components](#social-buttons-components)
+5. [Footer Component](#footer-component)
+6. [Header Component](#header-component)
+7. [News Section Components (Business, Sports, Politics, Technology)](#news-section-components-business-sports-politics-technology)
+8. [Card Slide component](#card-slide-component)
+9. [The News components](#the-news-components)
+10. [Cards compononent](#cards-compononent)
+11. [Contact Form Component](#contact-form-component)
+12. [TheOfficeComponent](#theofficecomponent)
+13. [Timeline Component](#timeline-component)
+14. [Card Journalist Component - Global News](#card-journalist-component---global-news)
+15. [1item-slide-card.js Component](#1-create-the-component)
+16. [Breaking News Component](#breaking-news-component)
+---
 
 ---
 # About Header Component
