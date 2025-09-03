@@ -79,6 +79,10 @@ All pictures used in this project were sourced from [Pexels](https://www.pexels.
     background-color: gray;
 }
 ```
+### ⚠️ 404 Page
+![404 Screenshot](assets/screenshots/Screenshot_404.jpeg)
+- A `404.html` page was implemented to display a user-friendly error message when the user tries to access a non-existent page.
+- It includes a navigation button to return to the Home page (`index.html`) without the need to use the browser's back button.
 ---
 ##  Project Structure 
 # 🗂️

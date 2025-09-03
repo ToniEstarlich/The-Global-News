@@ -56,8 +56,12 @@
 }
 
 @media (max-width: 1024px) {
+    .large-header {
+        font-size: 150%;
+    } 
     .main-title {
         margin-top: 3%;
+        margin-left: -2%;
         font-size: 230%;
     }
 }
@@ -66,8 +70,31 @@
     .large-header {
         font-size: 90%;
     }
+
+    .main-title {
+        margin-top: 4%;
+        margin-left: -1%;
+    }
     
 }
+
+@media (max-width: 820px) {
+    .large-header {
+        font-size: 120%;
+    } 
+}
+
+@media (max-width: 768px) {
+
+    .large-header {
+        font-size: 90%;
+    }
+    .main-title {
+        margin-top: 4%;
+        margin-left: -1%;
+    }
+}
+
 
 @media (max-width: 650px) {
     .large-header {
@@ -75,30 +102,25 @@
     }
 }
 
-@media (max-width: 768px) {
-    .main-title {
-        margin-top: 7%;
-    }
-}
-
-@media (max-width: 450px) {
+@media (max-width: 412px) {
     .large-header {
-        font-size: 35%;
+        font-size: 55%;
     }
 
     .main-title {
         margin-top: 8%;
+        font-size: 20%;
     }
 }
 
 .main-title .thin { font-weight: 200; }
 
-/* Ajustes responsivos */
+
 @media only screen and (max-width: 768px) {
     .main-title { font-size: 3em; }
 }
 
-/* Keyframes para la animación de estrellas */
+/* Animation stars */
 @keyframes animStar {
     from { transform: translateY(0px); }
     to { transform: translateY(-2000px); }
