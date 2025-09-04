@@ -46,10 +46,25 @@ Global News embodies the ideals of journalistic freedom and technology as a mean
 
 # 🖥️ Screenshots
 
-
+## Home
 | Desktop View | Tablet View | Mobile View |
 |--------------|-------------|-------------|
 | <img src="./assets/screenshots/pc-screen.jpeg" alt="Desktop Screenshot" width="330"> | <img src="./assets/screenshots/ipad-mini.jpeg" alt="Tablet Screenshot" width="150"> | <img src="./assets/screenshots/smartphone.png" alt="Mobile Screenshot" width="70"> |
+
+## The New
+| Desktop View | Tablet View | Mobile View |
+|--------------|-------------|-------------|
+| <img src="./assets/screenshots/pc_new.jpeg" alt="Desktop Screenshot" width="330"> | <img src="./assets/screenshots/ipad_new.jpeg" alt="Tablet Screenshot" width="150"> | <img src="./assets/screenshots/phone_new.jpeg" alt="Mobile Screenshot" width="70"> |
+
+## About
+| Desktop View | Tablet View | Mobile View |
+|--------------|-------------|-------------|
+| <img src="./assets/screenshots/PC_about.jpeg" alt="Desktop Screenshot" width="330"> | <img src="./assets/screenshots/ipad_about.jpeg" alt="Tablet Screenshot" width="150"> | <img src="./assets/screenshots/phone_about.jpeg" alt="Mobile Screenshot" width="70"> |
+
+## Contact
+| Desktop View | Tablet View | Mobile View |
+|--------------|-------------|-------------|
+| <img src="./assets/screenshots/PC_contact.jpeg" alt="Desktop Screenshot" width="330"> | <img src="./assets/screenshots/ipad_contact.jpeg" alt="Tablet Screenshot" width="150"> | <img src="./assets/screenshots/phone_contact.jpeg" alt="Mobile Screenshot" width="70"> |
 
 ---
 ## Design Style
