@@ -1,6 +1,15 @@
 # The Global News
  <img src="./assets/screenshots/responsive-news.jpg" alt="Desktop Screenshot" width="630"><br>
 **The Global News** is a fictional digital news platform that promotes independent journalism, free from corporate, political, or financial influence. This project showcases a responsive website that organizes news into various categories (sports, politics, technology, and business) while maintaining an accessible and scalable structure.
+## User Stories
+
+As a user:
+
+- Navigate between news categories easily so I can find relevant information quickly.  
+- Access the site on my phone and still read all content without issues.  
+- Open each article in a dedicated page to focus only on the content.  
+- Stay updated with a Breaking News section to be informed live.  
+
 ### Repository and Live Project  
 
 You can find the source code for **The Global News** in the GitHub repository below:  
@@ -306,6 +315,15 @@ Bootstrap, a popular front-end framework, was used to design a responsive and vi
 
 The project consists of four main wireframes: **Home**, **About**, **News**, and **Contact**. Each wireframe is designed to serve a specific purpose within the application. Below is an overview of each wireframe and its components.
 
+## Design Iteration 
+
+- The project started with wireframes for the home page and the contact page. The header with the navbar caused some issues at the beginning, but I eventually found satisfactory solutions.  
+- The home page wireframe showed a grid of categories, which is almost identical to the final version, with responsive adjustments to make the design adapt to both mobile and desktop.  
+- The contact page wireframe was very basic. In the final design, I added a styled form with appropriate fields to improve usability.  
+- Overall, the final implementation stayed close to the wireframes but included adjustments for better responsiveness and styling.  
+- During the creation of the home page, I added a **Breaking News** feature that was not part of the original wireframes, and integrated it into both the home page and the news pages.  
+
+
 ### 1. Home Wireframe
 <img src="./assets/wireframes/home-wireframe.png" alt="Desktop Screenshot" width="630"><br>
 
@@ -556,6 +574,15 @@ Finally, register the component with a unique tag name for it (e.g., `<the-compo
 ```js
 window.customElements.define('the-component', TheComponent);
 ``` 
+---
+## Git & Version Control
+
+Git was used throughout the development to manage versions of the project.
+
+- I committed regularly after finishing small features (e.g., creating the business section, adding navigation bar, fixing CSS issues).  
+- Commit messages were descriptive to make the progress clear.  
+- Since the project was built with independent JavaScript components, I often followed a trial-and-error approach, experimenting and refining before merging changes.  
+
 
 ---
 ## 🔨 How to Run the Project
@@ -564,11 +591,39 @@ window.customElements.define('the-component', TheComponent);
 ```bash
    git clone https://github.com/ToniEstarlich/Global-News
 ```
+## Deployment Procedure (GitHub Pages)
 
-### Changes & Additions:
-- The entire project structure, screenshots, and features are now combined seamlessly.
-- Screenshots are included with appropriate file paths.
-- The "How to Run the Project" section and repository link are integrated for completeness.
+1. **Push your project to GitHub**
+
+```bash
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin https://github.com/username/repository.git
+git push -u origin main
+```
+## Enable GitHub Pages
+
+1. Go to **Settings → Pages** in your repository.
+2. Set **Source** to `main` branch and folder `/root`.
+3. Click **Save**.
+
+## Access Your Website
+
+After a few minutes, your website will be live at:
+
+[https://ToniEstarlich.github.io/Global-News/](https://ToniEstarlich.github.io/Global-News/)
+
+## Update the Website
+
+To update your live website, simply commit and push changes to GitHub:
+
+```bash
+git add .
+git commit -m "Update site"
+git push
+```
 
 ---
 
