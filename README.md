@@ -600,7 +600,7 @@ git init
 git add .
 git commit -m "Initial commit"
 git branch -M main
-git remote add origin https://github.com/ToniEstarlich/Global-News.git
+git remote add origin https://github.com/ToniEstarlich/The-Global-News.git
 git push -u origin main
 ```
 ## Enable GitHub Pages
@@ -613,7 +613,7 @@ git push -u origin main
 
 After a few minutes, your website will be live at:
 
-[https://ToniEstarlich.github.io/Global-News/](https://ToniEstarlich.github.io/Global-News/)
+[https://github.com/ToniEstarlich/The-Global-News.git](https://github.com/ToniEstarlich/The-Global-News.git)
 
 ## Update the Website
 
