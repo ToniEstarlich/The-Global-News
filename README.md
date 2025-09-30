@@ -808,3 +808,15 @@ The `package-lock.json`:
 All tests passed successfully, ensuring the components are working as expected.
 
 ---
+
+## Deployment
+
+The project was deployed to GitHub Pages. The steps to deploy are as follows:
+
+1. In the GitHub repository, navigate to the **Settings** tab.
+2. In the left-hand menu, select **Pages**.
+3. From the **Source** section drop-down menu, select the **Main branch**.
+4. Once the main branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+
+The live link can be found here - [The Global News](https://toniestarlich.github.io/the-global-news.github.io-/)
+
