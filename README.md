@@ -820,3 +820,11 @@ The project was deployed to GitHub Pages. The steps to deploy are as follows:
 
 The live link can be found here - [The Global News](https://toniestarlich.github.io/the-global-news.github.io-/)
 
+
+## Usage Declaration
+
+This project has been developed over the course of one year (see commit history for reference).  
+ChatGPT has been used as a learning and creative support tool, just like Google, GitHub, W3Schools, college materials, YouTube, and CodePen for research and learning.  
+All code and final content are original and created by me.
+
+
