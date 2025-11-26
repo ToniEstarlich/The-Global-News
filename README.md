@@ -26,6 +26,7 @@ The live version of the project is accessible here:
 2. [Wireframes](#wireframes)
 5. [Development Process](#development-process)
 6. [Problem & Resolutions](#problem-and-resolution)
+7. [Testing](#test-results)
 ---
 
 ## 🚀 Project Vision
@@ -487,6 +488,7 @@ The application is divided into different HTML pages, such as **Home**, **About*
 </body>
 ```
 ### 4. Testing
+
 To ensure quality and functionality, the following testing processes were conducted:
 
 - **Jest**: Used for unit testing custom components to verify their behaviour and logic.
@@ -770,7 +772,15 @@ Alternatively, you can use:
 ---
 ## Test Results
 
-All tests passed successfully, confirming the functionality of the `aboutHeaderComponent`.
+### Manual & Automated Testing
+
+**Manual testing:** Involves manually checking that navigation, forms, links, animations, responsive design, and overall functionality work as expected. It is useful for detecting visual issues and usability problems.
+
+**Automated testing:** the Jest tool was used to automatically test the components, ensuring the code continues to work correctly after changes or updates. In this project, automated testing was performed on all 22 components of The Global News App.
+
+**W3C validation:** Additionally, W3C validators were used to check HTML/CSS code compliance.
+
+All tests passed successfully.
 
 ---
 ## Jest Testing
